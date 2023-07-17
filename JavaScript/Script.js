@@ -10,13 +10,13 @@ const CircularLogoDiv = document.getElementById("rotatingLogo");
 /*=========== Constant auto play rotation of Circular Logo ============ */
 
 //Use an setInterval to fall a function over and over again
-setInterval(constantRotationOfLogo, 10);
+setInterval(constantRotationOfLogo, 25);
 //Declare a variable that will decide the amount of degress the Logo should rotate 
 var degrees = 0;
 //Function that is called by the setInterval
 function constantRotationOfLogo(){
   //Add -0.25 degrees to variable degree for every time this function is called 
-  degrees -= 0.25;
+  degrees -= 0.75;
   //Rotate the CurcularLogoDiv anti clockwise an additional -0.25 degres every time function is called
   CircularLogoDiv.style.rotate = degrees + "deg";
 };
@@ -31,12 +31,12 @@ var st = document.documentElement.scrollTop;
    
   if (st > lastScrollTop){
     //When Scrolling down: rotate logo anti-clockwise
-    degrees -= 3;
+    degrees -= 2;
     CircularLogoDiv.style.rotate = degrees + "deg";
   }
   else {
     //When scrolling up: Rotate logo clockwise
-    degrees += 4;
+    degrees += 3;
     CircularLogoDiv.style.rotate = degrees + "deg";
   }
   
@@ -49,8 +49,6 @@ var st = document.documentElement.scrollTop;
   }
   
 }, false);
-
-
 
 /*=========================================================================================*/
 /*====================================== Sliding Div ======================================*/
