@@ -1,0 +1,1037 @@
+/*============================================================================================*/
+/*================================== CSS STYLING FOR THE PAGE ================================*/
+/*============================================================================================*/
+
+
+
+/*============================================================================================*/
+/*============================== External locally hosted Fonts ===============================*/
+/*============================================================================================*/
+
+@font-face {
+    font-family: "Austin";
+    src: url("../00.Media/Fonts/Austin-Light.otf") format("opentype"); /*Perhaps i need woff format*/
+    font-weight: light;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Sofia-Pro";
+    src: url("../00.Media/Fonts/Sofia-Pro-Medium.otf") format("opentype");
+    font-weight: light;
+    font-style: normal;
+}
+
+
+
+.bodyHome{
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px;  
+}
+
+/*============================================================================================*/
+/*============ Styling of Sliding Div (occuring in the beginning of page reload) =============*/
+/*============================================================================================*/
+
+
+/*============ Regular styling of sliding div components =============*/
+.slidingDiv{
+    background-color: rgb(8, 30, 108);
+    color: white;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    position: fixed;
+
+    /*Places the content into center of this div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.titleInSlidingDiv{
+    margin: 0 auto;
+    font-size: 36px;
+    
+
+    font-family: "Sofia-pro";
+    letter-spacing: 4px;
+    transform: scale(1.2,1);
+    font-weight: bold;
+}
+
+
+/*==== Animation of Sliding div and Fade-out of Title in Sliding Div ====*/
+
+.slidingDiv{
+    /* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+    animation: 0.7s ease-in-out 0.7s slideDownSlidingDiv;
+}
+
+.titleInSlidingDiv{
+    animation: 0.4s ease-in 0.3s forwards fadeOutTitleInSlidingDiv;
+}
+
+
+@keyframes slideDownSlidingDiv {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes fadeOutTitleInSlidingDiv {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/*============================================================================================*/
+/*=============================== Styling of Circular SVG Logo ===============================*/
+/*============================================================================================*/
+
+/*=============== Regular styling of Circular SVG Logo ================*/
+
+.rotatingLogo{
+
+    position: fixed;
+    top: 44%;
+    right: 15px;
+    height: 88px;
+    width: 88px;
+
+    z-index: 4;
+}
+
+.cls-1 {
+    fill: #231f20;
+    font-family: MyriadPro-Bold, 'Myriad Pro';
+    font-size: 13.2px;
+    font-weight: 700;
+}
+
+.cls-2 {
+    fill: none;
+    stroke: #231f20;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+}
+
+/*============================================================================================*/
+/*========================= Styling of Header and its components =============================*/
+/*============================================================================================*/
+
+
+/*========== Regular styling of Header and its components =============*/
+
+.headerHome{
+    background-color: yellow;
+    height: 100vh;
+}
+
+.navBarHome{
+ /*Places the content into center of this div*/
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+ position: relative;
+ z-index: 4;
+}
+
+.containerBurgerAndMenuHome{
+    background-color: transparent;
+    height: 20px;
+    width: 85px;
+    position: fixed;
+    top: 35px;
+    left: 3.3%;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.burgerDivHome{
+    width: 30px;
+    height: 20px;
+    background-color: transparent;
+    float: left;
+}
+
+.menuDivHome{
+    float: center;
+    background-color: transparent;
+    height: 20px;
+    font-weight: bold;
+
+    /*Places the content into center of this div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainerForTopTitleHome{
+    background-color: transparent;
+    position: fixed;
+    height: 44px;
+    width: 44px;
+    top: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.largeContainerForTopTitleHome{
+    background-color: transparent;
+    position: absolute;
+    height: 42px;
+    width: fit-content;
+    overflow: hidden;
+    /*Places the content into center of this div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.smallContainerForTopTitleHome{
+    background-color: transparent;
+    font-size: 46px;
+    font-weight: bold;
+    height: fit-content;
+    width: fit-content;
+    padding-left: 8px;
+    padding-bottom: 6px;
+    /*Places the content into center of this div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lettersInTopTitleHome{
+    color: black;
+    background-color: transparent;
+    font-size: 46px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    letter-spacing: 2px;
+    pointer-events: all;
+    /*Font added */
+    font-family: "Sofia-Pro";
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 10px;
+    transform: scale(1.2, 1.0);
+}
+
+.space{
+    padding-right: 10px;
+}
+
+.linkInTopTitleHome{
+    color: black;
+    text-decoration: none;
+}
+
+.containerSearchHome{
+    background-color: transparent;
+    padding: 2px;
+    position: fixed;
+    top: 38px;
+    left: 87.5%; /*87.5%*/
+    /*Places the content into center of this div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-icon-svg-home{
+    background-color: transparent; 
+       
+}
+
+.containerLocationHome{
+    background-color: transparent;
+    padding: 2px;
+    position: fixed;
+    top: 37px;
+    left: 94%; /*94%*/
+    /*Places the content into center of this div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.location-icon-svg-home{
+    background-color: transparent;
+}
+  
+/*============================================================================================*/
+/*============================ Animation of the Navigation Bar ===============================*/
+/*============================================================================================*/
+
+/*========== Slide down animation of the Burger and Menu =============*/
+
+.containerBurgerAndMenuHome{
+    animation: 1.5s linear 0.35s slideDownContainerBurgerAndMenuHome, 1.5s ease-in 0.5s fadeInBurgerAndMenuHome;
+}
+
+@keyframes slideDownContainerBurgerAndMenuHome {
+    0% {
+        transform: translateY(-400%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeInBurgerAndMenuHome {
+    
+    0% {
+       opacity: -1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*========== Slide down animation of the Top Homepage Title =============*/
+
+
+.mainContainerForTopTitleHome{ 
+    animation: 1.5s linear 0.35s slideDownMainContainerForTopTitleHome;
+
+}
+
+@keyframes slideDownMainContainerForTopTitleHome {
+    0% {
+        transform: translateY(-250%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.lettersInTopTitleHome{
+
+ animation: 1.0s ease-in 0.9s fadeInMainContainerForTopTitleHome;
+}
+
+@keyframes fadeInMainContainerForTopTitleHome {
+    
+    0% {
+       opacity: -1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*========== Slide down (and fade-in) animation of the search icon =============*/
+
+.containerSearchHome{
+    animation: 1.5s linear 0.35s slideDownContainerSearchHome;
+}
+
+@keyframes slideDownContainerSearchHome {
+    0% {
+        transform: translateY(-250%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+.search-icon-svg-home{
+    animation: 1.5s ease-in 0.5s fadeInContainerSearchHome;
+}
+
+@keyframes fadeInContainerSearchHome {
+    
+    0% {
+       opacity: -1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*========== Slide down (and fade-in) animation of the location icon =============*/
+
+.containerLocationHome{
+    animation: 1.5s linear 0.35s slideDownContainerLocationHome;
+}
+
+@keyframes slideDownContainerLocationHome {
+    0% {
+        transform: translateY(-250%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.location-icon-svg-home{
+    animation: 1.5s ease-in 0.5s fadeInContainerLocationHome;
+}
+
+@keyframes fadeInContainerLocationHome {
+    
+    0% {
+       opacity: -1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*============================================================================================*/
+/*=============== Horizontal (On-Hover) animation of the Burger and the Menu =================*/
+/*============================================================================================*/
+
+/*============ Animate Burger on hover =============*/
+
+.rectB{
+    transition: transform 0.25s;
+}
+
+.containerBurgerAndMenuHome:hover .rectB{
+    transform: translateX(0.8px);
+}
+
+/*============= Animate menue on hover ==============*/
+
+.menuTextHome{
+    transition: transform 0.25s;
+}
+
+.containerBurgerAndMenuHome:hover .menuTextHome{
+    transform: translateX(2.5px);
+}
+
+/*============================================================================================*/
+/*=================== Styling for animation (javascript) of Title Cutter =====================*/
+/*============================================================================================*/
+
+
+.moveSmallContainerForTopTitleHomeRight{
+    background-color: transparent;
+    font-size: 46px;
+    font-weight: bold;
+    height: fit-content;
+    width: fit-content;
+    padding-left: 8px;
+    padding-bottom: 6px;
+    /*Places the content into center of this div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+}
+
+.moveSmallContainerForTopTitleHomeRight{
+    transform: translateX(317px);
+}
+
+.moveSmallContainerForTopTitleHomeBackLeft{
+    background-color: transparent;
+    font-size: 46px;
+    font-weight: bold;
+    height: fit-content;
+    width: fit-content;
+    padding-left: 8px;
+    padding-bottom: 6px;
+    /*Places the content into center of this div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+}
+
+.moveSmallContainerForTopTitleHomeBackLeft{
+    transform: translateX(0px);
+}
+
+.moveLargeContainerForTopTitleHomeLeft{
+    background-color: transparent;
+    position: absolute;
+    height: 42px;
+    width: fit-content;
+    overflow: hidden;
+    pointer-events: none; 
+    /*Places the content into center of this div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    transition: transform 0.5s;
+}
+
+.moveLargeContainerForTopTitleHomeLeft{
+    transform: translateX(-159px);
+}
+
+.moveLargeContainerForTopTitleHomeBackRight{
+    background-color: transparent;
+    position: absolute;
+    height: 42px;
+    width: fit-content;
+    overflow: hidden; 
+    /*Places the content into center of this div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    transition: transform 0.5s;
+}
+
+.moveLargeContainerForTopTitleHomeBackRight{
+    transform: translateX(0px);
+}
+
+/*============================================================================================*/
+/*============== Animation/Transformation of the Search and Location Icons ===================*/
+/*============================================================================================*/
+
+
+.containerSearchHome{
+    transition: transform 0.25s;
+}
+
+.containerSearchHome:hover{
+    transform: scale(1.15); 
+}
+
+.containerLocationHome{
+    transition: transform 0.25s;
+}
+
+.containerLocationHome:hover{
+    transform: scale(1.15); 
+}
+
+
+/*============================================================================================*/
+/*======================= Styling of the SLIDER and it´s compontents =========================*/
+/*============================================================================================*/
+
+
+/*============== Navigation and Buttons in the Slider ===============*/
+
+.sliderButtons{
+    background-color: transparent;
+    position: absolute;
+    top: 39%;
+    left: 4.75%;    
+}
+
+.btnPrev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+}
+
+.btnNext{
+    background-color: transparent;
+    transform: rotate(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+}
+
+.btnSlider01{
+    background-color: transparent;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+}
+
+.btnSlider02{
+    background-color: transparent;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+}
+
+.btnSlider03{
+    background-color: transparent;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+}
+
+
+/*======= Carousel Slider =======*/
+
+.sliderHome{
+    background-color: pink;
+    width: 100%; /* Adjust width as needed */
+    height: 100vh; /* Adjust height as needed */
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0px;
+    position: relative;
+}
+
+.slidesInSliderHome{
+    background-color: lightseagreen;
+    display: flex;
+    height: 100%;
+    flex-direction: column; /* Set vertical direction */
+}
+
+.slide{
+    background-color: coral;
+    min-height: 100%;
+    position: relative;
+}
+
+.imagesInSliderHome{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vidsInSlider{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);     /*This adjusts the Header and text inside of the slides in X and Y*/
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+/*======== General (slider-specific) header and paragrah styling ========*/
+.slide-content h1 {
+    white-space: nowrap; /* Prevent line breaks */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+    font-size: 100px;
+    text-align: center;
+    margin-top: 0px;
+    font-family: "Austin";
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 10px;
+    padding-left: 10px; /*Added to compensate for the padding on the right, caused by letter spacing*/
+    line-height: 68px;
+    padding-bottom: 6px;
+    background-color: transparent;
+}
+
+.containersForParagraphAndUnderlinesInSlider{
+    background-color: transparent;
+    margin-top: 20px;
+    height: fit-content;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.slide-content p {
+    font-size: 22px; /* Adjust the font size as needed */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: "Sofia-Pro";
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 2px;
+    padding-left: 1px;    /*To compensate the fact that letter-spacing causes a padding-right (of 2px)*/
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    line-height: 30px;
+    background-color: transparent;
+}
+
+.containersHoldingDiscoverUnderlinesInSlider{
+    height: 2px;
+    margin-top: 0px;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+}
+
+/*Containers for discover underlines in the slider*/
+.containerFirstUnderlineSlider{
+    width: 268.8px;
+}
+
+.containerSecondUnderlineSlider{
+    width: 251px;
+}
+
+.containerThirdUnderlineSlider{
+    width: 264px;
+}
+
+/*====== Underlines inside of the first, second and third Slides ========*/
+
+.firstAnimatedUnderlineFirstSlide{
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: black;
+}
+
+.secondAnimatedUnderlineFirstSlide{
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    transform: translateX(-200%);
+    background-color: black;
+}
+
+.firstAnimatedUnderlineSecondSlide{
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: white;
+}
+
+.secondAnimatedUnderlineSecondSlide{
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    transform: translateX(-200%);
+    background-color: white;
+}
+
+.firstAnimatedUnderlineThirdSlide{
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: white;
+}
+
+.secondAnimatedUnderlineThirdSlide{
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    transform: translateX(-200%);
+    background-color: white;
+}
+
+
+/*======= Specific (for each slide) header and paragrah color styling ======*/
+.headerInFirstSlideOfSliderHome{
+    color: black;
+}
+
+.paragraphInFirstSlideOfSliderHome{
+    color: black;
+}
+
+
+/*=============================================================================================*/
+/*================== Animation of the Discover Underlines situated in Slider ==================*/
+/*=======================================================================================?=====*/
+
+/*===== Animation of the two underline divs situated in the first slide of the Slider =====*/
+
+.containerForParagraphAndUnderlineInFirstSlide {
+    position: relative; /* Set the container as the reference position for the underline elements */
+}
+
+.containerForParagraphAndUnderlineInFirstSlide:hover .firstAnimatedUnderlineFirstSlide {
+    transform: translateX(calc(200%)); /* Move the first underline to the right 2x its own length*/
+    transition: transform 0.75s ease; /* Apply a linear transition for smooth animation */
+}
+
+.containerForParagraphAndUnderlineInFirstSlide:hover .secondAnimatedUnderlineFirstSlide {
+    transform: translateX(calc(0%)); /* Move the second underline to the right 2x its own length (from -200 to 0%)*/
+    transition: transform 0.75s ease; /* Apply a linear transition for smooth animation */
+}
+
+.containerForParagraphAndUnderlineInFirstSlide .firstAnimatedUnderlineFirstSlide {
+    transition: transform 0.75s ease; /* Apply a linear transition to smoothly animate the first underline */
+}
+
+.containerForParagraphAndUnderlineInFirstSlide .secondAnimatedUnderlineFirstSlide {
+    transition: transform 0.75s ease; /* Apply a linear transition to smoothly animate the second underline */
+}
+  
+
+/*===== Animation of the two underline divs situated in the second slide of Slider =====*/
+
+.containerForParagraphAndUnderlineInSecondSlide {
+    position: relative; /* Set the container as the reference position for the underline elements */
+}
+
+.containerForParagraphAndUnderlineInSecondSlide:hover .firstAnimatedUnderlineSecondSlide {
+    transform: translateX(calc(200%)); /* Move the first underline to the right 2x its own length*/
+    transition: transform 0.75s ease; /* Apply a linear transition for smooth animation */
+}
+
+.containerForParagraphAndUnderlineInSecondSlide:hover .secondAnimatedUnderlineSecondSlide {
+    transform: translateX(calc(0%)); /* Move the second underline to the right 2x its own length (from -200 to 0%)*/
+    transition: transform 0.75s ease; /* Apply a linear transition for smooth animation */
+}
+
+.containerForParagraphAndUnderlineInSecondSlide .firstAnimatedUnderlineSecondSlide {
+    transition: transform 0.75s ease; /* Apply a linear transition to smoothly animate the first underline */
+}
+
+.containerForParagraphAndUnderlineInSecondSlide .secondAnimatedUnderlineSecondSlide {
+    transition: transform 0.75s ease;/* Apply a linear transition to smoothly animate the second underline */
+}
+
+
+/*===== Animation of the two underline divs situated in the third slide of Slider =====*/
+
+.containerForParagraphAndUnderlineInThirdSlide {
+    position: relative; /* Set the container as the reference position for the underline elements */
+}
+
+.containerForParagraphAndUnderlineInThirdSlide:hover .firstAnimatedUnderlineThirdSlide {
+    transform: translateX(calc(200%)); /* Move the first underline to the right 2x its own length*/
+    transition: transform 0.75s ease; /* Apply a linear transition for smooth animation */
+}
+
+.containerForParagraphAndUnderlineInThirdSlide:hover .secondAnimatedUnderlineThirdSlide {
+    transform: translateX(calc(0%)); /* Move the second underline to the right 2x its own length (from -200 to 0%)*/
+    transition: transform 0.75s ease; /* Apply a linear transition for smooth animation */
+}
+
+.containerForParagraphAndUnderlineInThirdSlide .firstAnimatedUnderlineThirdSlide {
+    transition: transform 0.75s ease; /* Apply a linear transition to smoothly animate the first underline */
+}
+
+.containerForParagraphAndUnderlineInThirdSlide .secondAnimatedUnderlineThirdSlide {
+    transition: transform 0.75s ease; /* Apply a linear transition to smoothly animate the second underline */
+}
+
+
+/*============================================================================================*/
+/*======================== Styling of the Body and it´s compontents ==========================*/
+/*============================================================================================*/
+
+.twoHighlights{
+    height: 100vh;
+    background-color: rgb(8, 30, 108);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.areasOfInterestHome{
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+}
+
+.contactMeHome{
+    height: 200px;
+    background-color: rgb(8, 30, 108);
+}
+.myProjectsHome{
+    height: 200px;
+    background-color: orange;
+}
+
+.shortAboutMe{
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/*============================================================================================*/
+/*=========================== Styling of the Highlights compontents ==========================*/
+/*============================================================================================*/
+
+.leftHighlight {
+    background-color: orange;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+ 
+}
+  
+.rightHighlight {
+    background-color: lightgreen;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+  
+.middleHighlight {
+    background-color: transparent;
+    width: 8%;
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.middleHighlight h1 {
+    background-color: transparent;
+    position: relative;
+    top: 0;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 68px;
+    text-align: center;
+    margin-top: 0;
+    font-family: "Austin";
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 10px;
+    padding-left: 10px;
+}
+  
+.containerDiscoverAndUnderline {
+    background-color: transparent;
+    padding: 0;
+    height: 22px;
+    width: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 24px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+  
+.middleHighlight p {
+    background-color: transparent;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 20px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    padding-left: 1px;
+}
+  
+.containerUnderlineHighlight {
+    display: flex;
+    cursor: pointer;
+    margin-top: 2px;
+    background-color: transparent;
+}
+  
+.firstAnimatedUnderlineHighlight {
+    background-color: white;
+    width: 125px;
+    height: 1px;
+    transform: translateX(-62.5px);
+}
+  
+.secondAnimatedUnderlineHighlight {
+    background-color: white;
+    width: 125px;
+    height: 1px;
+    transform: translateX(-250px);
+}
+  
+.pageSketch {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+
+
+/*============================================================================================*/
+/*================ Animation of the Discover Underline situated in Highlights ================*/
+/*============================================================================================*/
+
+
+.firstAnimatedUnderlineHighlight{
+    transition: transform 0.75s 0s;
+}
+
+.containerDiscoverAndUnderline:hover .firstAnimatedUnderlineHighlight{
+    transform: translateX(250px);
+}
+
+
+
+.secondAnimatedUnderlineHighlight{
+    transition: transform 0.75s 0s;
+}
+
+.containerDiscoverAndUnderline:hover .secondAnimatedUnderlineHighlight{
+    transform: translateX(62.5px);
+}
+
+
+/*============================================================================================*/
+/*================================== Styling of the Footer ===================================*/
+/*============================================================================================*/
+
+.footerHome{
+    background-color: rgb(8, 30, 108);
+    height: 300px;
+    width: 100%;
+}
+
+
+
+
