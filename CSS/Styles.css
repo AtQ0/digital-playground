@@ -51,8 +51,6 @@
 .titleInSlidingDiv{
     margin: 0 auto;
     font-size: 36px;
-    
-
     font-family: "Sofia-pro";
     letter-spacing: 4px;
     transform: scale(1.2,1);
@@ -96,9 +94,7 @@
 
 /*=============== Regular styling of Circular SVG Logo ================*/
 
-
 .rotatingLogo{
-
     position: fixed;
     top: 44%;
     right: 15px;
@@ -125,7 +121,6 @@
 /*============================================================================================*/
 /*========================= Styling of Header and its components =============================*/
 /*============================================================================================*/
-
 
 /*========== Regular styling of Header and its components =============*/
 
