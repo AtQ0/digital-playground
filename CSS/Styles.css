@@ -1023,13 +1023,15 @@
 
 
 /*============================================================================================*/
-/*======================== Styling of the div called Areas of Interest =======================*/
+/*==================== General Styling of the div called Areas of Interest ===================*/
 /*============================================================================================*/
 
 .areasOfInterestHome{
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
     grid-template-rows: 1fr;
+    background-color: blueviolet;
+    height: auto;
 }
 
 .firstRowOfInterestFromLeft{
@@ -1063,12 +1065,45 @@
 }
 
 /*============================================================================================*/
+/*============================ Styling of each area of interest ==============================*/
+/*============================================================================================*/
+
+
+/*================ Styling of left area of interest divs ===================*/
+.secondRowOfInterestFromLeft{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 300px auto;
+}
+
+.aboutMeHome{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: lightgoldenrodyellow;
+    height: 500px;
+    width:auto;
+}
+
+.photographyHome{
+    background-color: cadetblue;
+    height: 500px;
+    width:auto;
+    grid-column: 1/2;
+    grid-row: 3/4;
+   
+}
+
+
+/*================ Styling of right area of interest divs =================*/
+
+
+/*============================================================================================*/
 /*================================== Styling of the Footer ===================================*/
 /*============================================================================================*/
 
 .footerHome{
     display: flex;
-    background-color: rgb(8, 30, 108);
+    background-color: lightgreen;
     height: 300px;
     width: 100%;
 }
