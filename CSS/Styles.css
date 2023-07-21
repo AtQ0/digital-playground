@@ -101,6 +101,7 @@
     height: 88px;
     width: 88px;
     z-index: 4;
+    background-blend-mode: color white;
 }
 
 .cls-1 {
@@ -882,7 +883,7 @@
 /*============================================================================================*/
 
 .leftHighlight {
-    background-color: orange;
+    background-color: rgb(8, 30, 108);
     width: 50%;
     height: 100%;
     position: absolute;
@@ -896,7 +897,7 @@
 }
   
 .rightHighlight {
-    background-color: lightgreen;
+    background-color: rgb(8, 30, 108);
     width: 50%;
     height: 100%;
     position: absolute;
@@ -988,6 +989,12 @@
     height: 100%;
     object-fit: cover;
 }
+
+.pageSketch2{
+    width: 45%;
+    height: 45%;
+    object-fit: cover;
+}
   
 
 
@@ -1016,10 +1023,51 @@
 
 
 /*============================================================================================*/
+/*======================== Styling of the div called Areas of Interest =======================*/
+/*============================================================================================*/
+
+.areasOfInterestHome{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.firstRowOfInterestFromLeft{
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: yellow;
+}
+
+.secondRowOfInterestFromLeft{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: lightsalmon;
+}
+
+.thirdRowOfInterestFromLeft{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.fourthRowOfInterestFromLeft{
+    grid-column: 4/5;
+    grid-row: 1/2;
+    background-color: lightblue;
+}
+
+.fifthRowOfInterestFromLeft{
+    grid-column: 5/6;
+    grid-row: 1/2;
+    background-color: coral;
+}
+
+/*============================================================================================*/
 /*================================== Styling of the Footer ===================================*/
 /*============================================================================================*/
 
 .footerHome{
+    display: flex;
     background-color: rgb(8, 30, 108);
     height: 300px;
     width: 100%;
