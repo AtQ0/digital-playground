@@ -1029,7 +1029,7 @@
 .areasOfInterestHome{
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 100px 1520px 100px;
     background-color: blueviolet;
     height: auto;
 }
@@ -1037,31 +1037,31 @@
 .firstRowOfInterestFromLeft{
     display: flex;
     grid-column: 1/2;
-    grid-row: 1/2;
+    grid-row: 2/3;
     background-color: yellow;
 }
 
 .secondRowOfInterestFromLeft{
     grid-column: 2/3;
-    grid-row: 1/2;
+    grid-row: 2/3;
     background-color: lightsalmon;
 }
 
 .thirdRowOfInterestFromLeft{
     grid-column: 3/4;
-    grid-row: 1/2;
+    grid-row: 2/3;
 }
 
 .fourthRowOfInterestFromLeft{
     grid-column: 4/5;
-    grid-row: 1/2;
-    background-color: lightblue;
+    grid-row: 2/3;
+    background-color: lightsalmon;
 }
 
 .fifthRowOfInterestFromLeft{
     grid-column: 5/6;
-    grid-row: 1/2;
-    background-color: coral;
+    grid-row: 2/3;
+    background-color: pink;
 }
 
 /*============================================================================================*/
@@ -1073,29 +1073,48 @@
 .secondRowOfInterestFromLeft{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 300px auto;
+    grid-template-rows: auto 0px auto;
 }
 
 .aboutMeHome{
     grid-column: 1/2;
     grid-row: 1/2;
     background-color: lightgoldenrodyellow;
-    height: 500px;
+    height: 460px;
     width:auto;
 }
 
 .photographyHome{
     background-color: cadetblue;
-    height: 500px;
+    height: 450px;
     width:auto;
     grid-column: 1/2;
-    grid-row: 3/4;
-   
+    grid-row: 3/4;   
 }
 
 
 /*================ Styling of right area of interest divs =================*/
+.fourthRowOfInterestFromLeft{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 360px auto 260px auto;
+}
 
+.webDevelopmentHome{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: lightgoldenrodyellow;
+    width: auto;
+    height: 450px;
+}
+
+.gameDevelopmentHome{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    background-color: lightseagreen;
+    width: auto;
+    height: 450px;
+}
 
 /*============================================================================================*/
 /*================================== Styling of the Footer ===================================*/
