@@ -60,7 +60,7 @@ const slidingDiv = document.getElementById("slidingDiv");
 
 /*=========== Turn of Sliding div after it has slided down ============*/
 
-window.setTimeout(hideSlidingDiv, 1420);
+window.setTimeout(hideSlidingDiv, 1380);
 
 function hideSlidingDiv(){
 

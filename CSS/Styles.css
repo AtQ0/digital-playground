@@ -864,16 +864,16 @@
 }
 
 .contactMeHome{
-    height: 200px;
+    height: 100vh;
     background-color: rgb(8, 30, 108);
 }
 .myProjectsHome{
-    height: 200px;
+    height: 100vh;
     background-color: orange;
 }
 
 .shortAboutMe{
-    height: 200px;
+    height: 100vh;
     background-color: rgb(255, 255, 255);
 }
 
@@ -924,7 +924,7 @@
     background-color: transparent;
     position: relative;
     top: 0;
-    color: white;
+    color: pink;
     margin-bottom: 20px;
     font-size: 68px;
     text-align: center;
@@ -934,6 +934,9 @@
     font-style: normal;
     letter-spacing: 10px;
     padding-left: 10px;
+    
+    mix-blend-mode: difference;
+
 }
   
 .containerDiscoverAndUnderline {
@@ -1026,42 +1029,43 @@
 /*==================== General Styling of the div called Areas of Interest ===================*/
 /*============================================================================================*/
 
+
+/*Dividing areas of interest into five columns and three rows*/
 .areasOfInterestHome{
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-    grid-template-rows: 100px 1520px 100px;
+    grid-template-rows: 100px 1515px 100px;
     background-color: blueviolet;
     height: auto;
 }
 
-.firstRowOfInterestFromLeft{
-    display: flex;
+.firstColumnOfInterestFromLeft{
     grid-column: 1/2;
     grid-row: 2/3;
     background-color: yellow;
 }
 
-.secondRowOfInterestFromLeft{
+.secondColumnOfInterestFromLeft{
     grid-column: 2/3;
     grid-row: 2/3;
-    background-color: lightsalmon;
+    background-color: lightsalmon;       
 }
 
-.thirdRowOfInterestFromLeft{
+.thirdColumnOfInterestFromLeft{
     grid-column: 3/4;
     grid-row: 2/3;
 }
 
-.fourthRowOfInterestFromLeft{
+.fourthColumnOfInterestFromLeft{
     grid-column: 4/5;
     grid-row: 2/3;
     background-color: lightsalmon;
 }
 
-.fifthRowOfInterestFromLeft{
+.fifthColumnOfInterestFromLeft{
     grid-column: 5/6;
     grid-row: 2/3;
-    background-color: pink;
+    background-color: yellow;
 }
 
 /*============================================================================================*/
@@ -1073,7 +1077,7 @@
 .secondRowOfInterestFromLeft{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 0px auto;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .aboutMeHome{
@@ -1084,6 +1088,13 @@
     width:auto;
 }
 
+.verticalSpaceBetweenLeftDivs{
+    height: 245px;
+    background-color: blue;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
 .photographyHome{
     background-color: cadetblue;
     height: 450px;
@@ -1092,12 +1103,19 @@
     grid-row: 3/4;   
 }
 
-
 /*================ Styling of right area of interest divs =================*/
 .fourthRowOfInterestFromLeft{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 360px auto 260px auto;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.verticalSpaceAboveRightDivs{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: blue;
+    width: auto;
+    height: 350px;
 }
 
 .webDevelopmentHome{
@@ -1108,6 +1126,15 @@
     height: 450px;
 }
 
+
+.verticalSpaceBetweenRightDivs{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-color: blue;
+    width: auto;
+    height: 265px;
+}
+
 .gameDevelopmentHome{
     grid-column: 1/2;
     grid-row: 4/5;
@@ -1116,14 +1143,24 @@
     height: 450px;
 }
 
+
+/*============================================================================================*/
+/*============================== Styling of the Contact me Div ===============================*/
+/*============================================================================================*/
+
+.contactMeHome p, h1{
+    color: white;
+}
+
+
 /*============================================================================================*/
 /*================================== Styling of the Footer ===================================*/
 /*============================================================================================*/
 
 .footerHome{
     display: flex;
-    background-color: lightgreen;
-    height: 300px;
+    background-color: rgb(8, 30, 108);
+    height: 330px;
     width: 100%;
 }
 
