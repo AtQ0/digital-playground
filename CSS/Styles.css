@@ -1035,7 +1035,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
     grid-template-rows: 100px 1515px 100px;
-    background-color: blueviolet;
+    background-color: purple;
     height: auto;
 }
 
@@ -1051,9 +1051,11 @@
     background-color: lightsalmon;       
 }
 
-.thirdColumnOfInterestFromLeft{
+.thirdColumndOfInterestFromLeft{
     grid-column: 3/4;
     grid-row: 2/3;
+    background-color: sienna;
+    position: relative;   
 }
 
 .fourthColumnOfInterestFromLeft{
@@ -1073,7 +1075,7 @@
 /*============================================================================================*/
 
 
-/*================ Styling of left area of interest divs ===================*/
+/*================ Styling of 2nd left column of area of interest divs =================*/
 .secondRowOfInterestFromLeft{
     display: grid;
     grid-template-columns: 1fr;
@@ -1103,7 +1105,19 @@
     grid-row: 3/4;   
 }
 
-/*================ Styling of right area of interest divs =================*/
+/*============ Styling of 3rd left (middle) column of area of interest divs =============*/
+
+.thirdColumndOfInterestFromLeft p{
+    background-color: transparent;
+    font-family: "Austin";
+    font-size: 68px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top:260px;
+}
+
+/*================ Styling of 4th left column of area of interest divs =================*/
 .fourthRowOfInterestFromLeft{
     display: grid;
     grid-template-columns: 1fr;
