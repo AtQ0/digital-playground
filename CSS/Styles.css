@@ -924,7 +924,7 @@
     background-color: transparent;
     position: relative;
     top: 0;
-    color: pink;
+    color: white;
     margin-bottom: 20px;
     font-size: 68px;
     text-align: center;
@@ -934,9 +934,7 @@
     font-style: normal;
     letter-spacing: 10px;
     padding-left: 10px;
-    
     mix-blend-mode: difference;
-
 }
   
 .containerDiscoverAndUnderline {
