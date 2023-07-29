@@ -1058,7 +1058,10 @@
     position: relative;   
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:flex-start;
+
+    padding-top: 250px;             /*sets the starting heigh of expertise text*/
+    padding-bottom: 250px;          /*sets the stop of expertise text*/
 }
 
 .fourthColumnOfInterestFromLeft{
@@ -1115,17 +1118,15 @@
     font-family: "Austin";
     font-size: 88px;
     color: white;
-    text-align: center;
+    text-align: 300px;
 
-    position: -webkit-sticky;
+
     position: sticky;
-    top: 0;
- 
+    top: 315px; /*sets the size of how long from top the div should stick*/
+   
 
 
 
-    position: absolute;
-    top:230px;
 }
 
 /*================ Styling of 4th left column of area of interest divs =================*/
