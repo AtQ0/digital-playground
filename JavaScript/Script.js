@@ -12,7 +12,7 @@ const CircularLogoDiv = document.getElementById("rotatingLogo");
 //Use an setInterval to fall a function over and over again
 setInterval(constantRotationOfLogo, 25);
 //Declare a variable that will decide the amount of degress the Logo should rotate 
-var degrees = 0;
+let degrees = 0;
 //Function that is called by the setInterval
 function constantRotationOfLogo(){
   //Add -0.25 degrees to variable degree for every time this function is called 
@@ -24,10 +24,10 @@ function constantRotationOfLogo(){
 
 /*============ Additional rotation of Circular Logo when srcolling up or down ===========*/
 
-var lastScrollTop = 0;
+let lastScrollTop = 0;
 
 window.addEventListener("scroll", function(){
-var st = document.documentElement.scrollTop;
+let st = document.documentElement.scrollTop;
    
   if (st > lastScrollTop){
     //When Scrolling down: rotate logo anti-clockwise
@@ -78,7 +78,7 @@ const largeContainerForTopTitleHome = document.getElementById("largeContainerFor
 const mainContainerForTopTitleHome = document.getElementById("mainContainerForTopTitleHome");
 
 window.onscroll = function() {
-  var scrollLimit = 50;
+  let scrollLimit = 50;
   if (window.scrollY > scrollLimit) {    
     //Moving small container right
     smallContainerForTopTitleHome.classList.remove("smallContainerForTopTitleHome");
@@ -240,13 +240,14 @@ window.addEventListener('resize', () => {
 /*====================================================================================*/
 
 
+
+
 //Selecting elements from the DOM
 
 
 /*====================================================================================*/
 /*==================================== Highlights ====================================*/
 /*====================================================================================*/
-
 
 
 

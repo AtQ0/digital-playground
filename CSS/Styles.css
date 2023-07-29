@@ -28,6 +28,7 @@
 }
 
 
+
 /*============================================================================================*/
 /*============ Styling of Sliding Div (occuring in the beginning of page reload) =============*/
 /*============================================================================================*/
@@ -101,7 +102,7 @@
     height: 88px;
     width: 88px;
     z-index: 4;
-    background-blend-mode: color white;
+
 }
 
 .cls-1 {
@@ -117,6 +118,7 @@
     stroke-miterlimit: 10;
     stroke-width: 2px;
 }
+
 
 
 /*============================================================================================*/
@@ -696,11 +698,11 @@
 
 /*Containers for discover underlines in the slider*/
 .containerFirstUnderlineSlider{
-    width: 268.8px;
+    width: 304px;
 }
 
 .containerSecondUnderlineSlider{
-    width: 251px;
+    width: 275px;
 }
 
 .containerThirdUnderlineSlider{
