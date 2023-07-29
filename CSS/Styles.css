@@ -211,7 +211,7 @@
     align-items: center;
 }
 .lettersInTopTitleHome{
-    color: black;
+    color: pink;
     background-color: transparent;
     font-size: 46px;
     font-weight: bold;
@@ -1110,12 +1110,20 @@
 
 /*============ Styling of 3rd left (middle) column of area of interest divs =============*/
 
-.thirdColumndOfInterestFromLeft p{
-    background-color: transparent;
+.contentThirdColumnOfInterest{
+    background-color: lightblue;
     font-family: "Austin";
     font-size: 88px;
     color: white;
     text-align: center;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+ 
+
+
+
     position: absolute;
     top:230px;
 }
