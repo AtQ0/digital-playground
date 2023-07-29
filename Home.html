@@ -283,13 +283,28 @@
             <div id="shortAboutMe" class="shortAboutMe">
             </div>
 
+            <!--Tag used to test REACT-->
+            <div id="react_container"></div>
+
         </main>
         
         <footer id="footerHome" class="footerHome">
             FOOOOOOOOOOOT
         </footer>
+
+
+        <!--====================================================================================-->
+        <!--============================ ADDING JavaScript SCRIPTS =============================-->
+        <!--====================================================================================-->
         
+        <!--Linking local javaScript file to current html file-->
         <script src="./JavaScript/Script.js"></script> 
+
+        <!-- Load React. -->
+        <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="./JavaScript/ReactScript.js"></script>
     </body>
 </html>
 
