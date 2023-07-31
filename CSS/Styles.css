@@ -1060,9 +1060,6 @@
     display: flex;
     justify-content: center;
     align-items:flex-start;
-
-    padding-top: 25%;             /*250px sets the starting heigh of expertise text, used by sticky position in .contentThirdColumnOfInterest*/
-    padding-bottom: 25%;          /*250px sets the stop of expertise text, used by sticky position in .contentThirdColumnOfInterest*/
 }
 
 .fourthColumnOfInterestFromLeft{
@@ -1119,14 +1116,17 @@
     font-family: "Austin";
     font-size: 88px;
     color: white;
-    text-align: 300px;
 
-    /*Properties used for manipulating paragraph containing wording EXPERTISE*/
-    position: sticky;
-    top: 315px; /*sets the size of how long from top the div should stick*/
-    /*See also padding properties in .thirdColumndOfInterestFromLeft above, for setting start and end position*/
-   
+    position: absolute;
+    top: 120px;               /*Sets the vertical start position of this current div*/
 }
+
+.newContentThirdColumnOfInterest{
+    position: sticky;
+    background-color: lightcoral;
+}
+
+
 
 /*================ Styling of 4th left column of area of interest divs =================*/
 .fourthRowOfInterestFromLeft{

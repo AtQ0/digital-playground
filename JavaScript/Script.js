@@ -248,6 +248,18 @@ window.addEventListener('resize', () => {
 /*====================================================================================*/
 
 
+$(document).ready(function() {
+  $(window).on('scroll', function() {
+      // Calculate the position of the .contentThirdColumnOfInterest element
+      var divOffset = $('.contentThirdColumnOfInterest').offset().top;
+      var windowHeight = $(window).height();
+      var scrollPosition = $(window).scrollTop();
+      var threshold = windowHeight * 0.42; // 44% of the viewport height
 
-
+      // Check if the element is at or below the threshold
+      if (scrollPosition >= divOffset - threshold) {
+          alert("It's reached 44vh!");
+      }
+  });
+});
 
