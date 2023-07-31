@@ -236,21 +236,23 @@ window.addEventListener('resize', () => {
 
 
 /*====================================================================================*/
-/*==================== Change Color Depending of background ==========================*/
+/*======= Change text color of nav and rotating logo depending on background =========*/
 /*====================================================================================*/
-
-
-//Selecting elements from the DOM
-
 
 /*====================================================================================*/
 /*==================================== Highlights ====================================*/
 /*====================================================================================*/
 
 
-/* Grab something by its ID: $("#aDivCalledJoe")      */
-/* Grab something by its class $(".aDivCalledJoe")    */ 
 
+
+/*====================================================================================*/
+/*================================ AREAS OF INTEREST =================================*/
+/*====================================================================================*/
+
+/*== Applying sticky to moving paragraph inside of thirdColumndOfInterestFromLeft ==*/
+
+//Selecting elements from the DOM
 const paragraph = document.querySelector('.contentThirdColumnOfInterest');
 const parent = document.querySelector('.thirdColumndOfInterestFromLeft');
 let isSticky = false;
