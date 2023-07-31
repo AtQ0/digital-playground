@@ -698,15 +698,16 @@
 
 /*Containers for discover underlines in the slider*/
 .containerFirstUnderlineSlider{
-    width: 304px;
+    width: 118.8px;
 }
 
 .containerSecondUnderlineSlider{
-    width: 275px;
+    width: 118.8px;
+    
 }
 
 .containerThirdUnderlineSlider{
-    width: 264px;
+    width: 118.8px;
 }
 
 /*====== Underlines inside of the first, second and third Slides ========*/
@@ -1060,8 +1061,8 @@
     justify-content: center;
     align-items:flex-start;
 
-    padding-top: 250px;             /*sets the starting heigh of expertise text*/
-    padding-bottom: 250px;          /*sets the stop of expertise text*/
+    padding-top: 25%;             /*250px sets the starting heigh of expertise text, used by sticky position in .contentThirdColumnOfInterest*/
+    padding-bottom: 25%;          /*250px sets the stop of expertise text, used by sticky position in .contentThirdColumnOfInterest*/
 }
 
 .fourthColumnOfInterestFromLeft{
@@ -1120,13 +1121,11 @@
     color: white;
     text-align: 300px;
 
-
+    /*Properties used for manipulating paragraph containing wording EXPERTISE*/
     position: sticky;
     top: 315px; /*sets the size of how long from top the div should stick*/
+    /*See also padding properties in .thirdColumndOfInterestFromLeft above, for setting start and end position*/
    
-
-
-
 }
 
 /*================ Styling of 4th left column of area of interest divs =================*/
