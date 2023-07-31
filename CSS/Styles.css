@@ -1049,23 +1049,23 @@
 .secondColumnOfInterestFromLeft{
     grid-column: 2/3;
     grid-row: 2/3;
-    background-color: lightsalmon;       
+    background-color: blue;       
 }
 
 .thirdColumndOfInterestFromLeft{
     grid-column: 3/4;
     grid-row: 2/3;
     background-color: sienna;
-    position: relative;   
-    display: flex;
-    justify-content: center;
-    align-items:flex-start;
+    
+    /*Padidng used for start/end point of sticky paragraph*/
+    padding-top: 20%;                  
+    padding-bottom: 20%;
 }
 
 .fourthColumnOfInterestFromLeft{
     grid-column: 4/5;
     grid-row: 2/3;
-    background-color: lightsalmon;
+    background-color: blue;
 }
 
 .fifthColumnOfInterestFromLeft{
@@ -1102,7 +1102,7 @@
 }
 
 .photographyHome{
-    background-color: cadetblue;
+    background-color: lightyellow;
     height: 450px;
     width:auto;
     grid-column: 1/2;
@@ -1116,17 +1116,14 @@
     font-family: "Austin";
     font-size: 88px;
     color: white;
-
-    position: absolute;
-    top: 120px;               /*Sets the vertical start position of this current div*/
+    text-align: center;
+    top: 42%;  /*Sets the vertical distance between the navbar and the current div (paragraph containing wording EXPERTISE)*/
 }
 
-.newContentThirdColumnOfInterest{
-    position: sticky;
-    background-color: lightcoral;
+/*class applied by javascript on the contentThirdColumnOfInterest element*/
+.sticky {
+    position: sticky;   /*locks element to center of viewport*/
 }
-
-
 
 /*================ Styling of 4th left column of area of interest divs =================*/
 .fourthRowOfInterestFromLeft{
@@ -1163,7 +1160,7 @@
 .gameDevelopmentHome{
     grid-column: 1/2;
     grid-row: 4/5;
-    background-color: lightseagreen;
+    background-color: lightyellow;
     width: auto;
     height: 450px;
 }

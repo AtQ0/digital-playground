@@ -248,18 +248,31 @@ window.addEventListener('resize', () => {
 /*====================================================================================*/
 
 
-$(document).ready(function() {
-  $(window).on('scroll', function() {
-      // Calculate the position of the .contentThirdColumnOfInterest element
-      var divOffset = $('.contentThirdColumnOfInterest').offset().top;
-      var windowHeight = $(window).height();
-      var scrollPosition = $(window).scrollTop();
-      var threshold = windowHeight * 0.42; // 44% of the viewport height
+/* Grab something by its ID: $("#aDivCalledJoe")      */
+/* Grab something by its class $(".aDivCalledJoe")    */ 
 
-      // Check if the element is at or below the threshold
-      if (scrollPosition >= divOffset - threshold) {
-          alert("It's reached 44vh!");
-      }
-  });
-});
+const paragraph = document.querySelector('.contentThirdColumnOfInterest');
+const parent = document.querySelector('.thirdColumndOfInterestFromLeft');
+let isSticky = false;
+
+function handleScroll() {
+  const parentRect = parent.getBoundingClientRect();
+  const paragraphRect = paragraph.getBoundingClientRect();
+
+  // Calculate the threshold position where the paragraph should become sticky
+  const threshold = parentRect.top + parentRect.height * (1 / 5);
+
+  if (!isSticky && window.scrollY >= threshold) {
+    // Add the .sticky class and update the isSticky flag when the threshold is reached
+    paragraph.classList.add('sticky');
+    isSticky = true;
+  } else if (isSticky && window.scrollY < threshold) {
+    // Remove the .sticky class and update the isSticky flag if the user scrolls back above the threshold
+    paragraph.classList.remove('sticky');
+    isSticky = false;
+  }
+}
+
+// Add a scroll event listener to call the handleScroll function on scroll
+window.addEventListener('scroll', handleScroll);
 
