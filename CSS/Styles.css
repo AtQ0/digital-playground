@@ -1036,7 +1036,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr 2.5fr 2fr 1fr;
     grid-template-rows: 100px 1515px 100px;
-    background-color: purple;
+    background-color: white;
     height: auto;
 }
 
@@ -1075,7 +1075,7 @@
 }
 
 /*============================================================================================*/
-/*============================ Styling of each area of interest ==============================*/
+/*======================== General Styling of each area of interest ==========================*/
 /*============================================================================================*/
 
 
@@ -1095,7 +1095,7 @@
 }
 
 .verticalSpaceBetweenLeftDivs{
-    height: 245px;
+    height: 247px;
     background-color: blue;
     grid-column: 1/2;
     grid-row: 2/3;
@@ -1165,14 +1165,135 @@
     height: 450px;
 }
 
+/*============================================================================================*/
+/*===================== Detailed styling of About ME, area of interest =======================*/
+/*============================================================================================*/
+
+/*Divide aboutMeHome into two columns*/
+.aboutMeHome{
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 1fr;
+
+}
+
+.aboutMeHomeLeft{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: lightgreen;
+    width: 34px;
+}
+
+.aboutMeHomeRight{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: lightskyblue;
+    height: 460px;
+   
+}
+
+
+/*Divide aboutMeHomeLeft into two rows*/
+.aboutMeHomeLeft{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+.aboutMeHomeHeader{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: orange;
+    font-family: Sofia-Pro;
+    
+
+    /*Changes the writing mode inside of a div into vertical (right to left)*/
+    writing-mode: vertical-rl;
+
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.aboutMeHomeLineANDNumber{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: grey;    
+
+}
+
+/*Adjust container for*/
+.containerLineAndNumberAboutMe{
+    background-color: lightsteelblue;
+    width: 18.5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.svgLineAboutMeHome{
+    background-color: white;
+}
+
+.aboutMeHomeNumber{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: green;
+    font-family: Sofia-Pro;
+    
+    /*Changes the writing mode inside of a div into vertical (right to left)*/
+    writing-mode: vertical-rl;
+    width: 16px;
+    padding-left: 2.5px;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
 
 /*============================================================================================*/
 /*============================== Styling of the Contact me Div ===============================*/
 /*============================================================================================*/
 
-.contactMeHome p, h1{
-    color: white;
+.contactMeHome{
+    display: flex;
+
+    height: 87vh;
 }
+
+.leftContactHome{
+    background-color: lightgray;
+    width: 50%;
+    height: auto;
+
+    
+}
+
+.rightContactHome{
+    background-color: lightcoral;
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.containerContactMeHome{
+    background-color: lightsteelblue;
+    width: 70%;
+    height: 250px;
+
+    
+}
+
 
 
 /*============================================================================================*/
