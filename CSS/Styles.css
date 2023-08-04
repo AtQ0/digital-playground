@@ -1089,9 +1089,10 @@
 .aboutMeHome{
     grid-column: 1/2;
     grid-row: 1/2;
-    background-color: lightgoldenrodyellow;
-    height: 460px;
+    background-color: black;
+    height: 450px;
     width:auto;
+    overflow: hidden;
 }
 
 .verticalSpaceBetweenLeftDivs{
@@ -1188,7 +1189,9 @@
     grid-column: 2/3;
     grid-row: 1/2;
     background-color: lightskyblue;
-    height: 460px;
+    height: 450px;
+    overflow: hidden;
+    
    
 }
 
@@ -1256,6 +1259,28 @@
 
 
 }
+
+
+/*=================================================*/
+
+/*============== Zoom on main themes ==============*/
+
+/*=================================================*/
+
+/*Adding hover zoom on pictures aboutMe-Gaming*/
+.imgAboutMe{
+
+    transition: transform 0.5s;
+
+    /*Change cursor to hand, when hovering*/
+    cursor: pointer;
+}
+
+.imgAboutMe:hover{
+
+    transform: scale(1.15); 
+}
+
 
 
 /*============================================================================================*/
