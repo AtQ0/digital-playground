@@ -31,12 +31,12 @@ let st = document.documentElement.scrollTop;
    
   if (st > lastScrollTop){
     //When Scrolling down: rotate logo anti-clockwise
-    degrees -= 2;
+    degrees -= 3;
     CircularLogoDiv.style.rotate = degrees + "deg";
   }
   else {
     //When scrolling up: Rotate logo clockwise
-    degrees += 3;
+    degrees += 4;
     CircularLogoDiv.style.rotate = degrees + "deg";
   }
   
