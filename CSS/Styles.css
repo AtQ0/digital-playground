@@ -1116,7 +1116,7 @@
     background-color: lightblue;
     font-family: "Austin";
     font-size: 88px;
-    line-height: 70px;
+    line-height: 76px;
     color: white;
     text-align: center;
     top: 42%;  /*Sets the vertical distance between the navbar and the current div (paragraph containing wording EXPERTISE)*/
@@ -1177,13 +1177,17 @@
     grid-template-columns: 1fr 10fr;
     grid-template-rows: 1fr;
 
+    /*Crop picture inside to fit the DIV-dimension*/
+    overflow: hidden;
+    min-width: 341px;           /*341W 465H*/
+
 }
 
 .aboutMeHomeLeft{
     grid-column: 1/2;
     grid-row: 1/2;
     background-color: lightgreen;
-    width: 34px;
+    width: 32px;    /*Changes distance between text and picture*/
 }
 
 .aboutMeHomeRight{
@@ -1192,7 +1196,6 @@
     background-color: lightskyblue;
     height: 450px;
     overflow: hidden;
-    
    
 }
 
@@ -1230,7 +1233,6 @@
 .containerLineAndNumberAboutMe{
     background-color: lightsteelblue;
     width: 18.5px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1253,13 +1255,11 @@
     width: 16px;
     padding-left: 2.5px;
 
-    
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
+
 
 
 /*=================================================*/
