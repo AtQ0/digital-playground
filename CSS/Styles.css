@@ -1050,6 +1050,10 @@
     grid-column: 2/3;
     grid-row: 2/3;
     background-color: blue;       
+
+    /*Crop picture inside to fit the DIV-dimension*/
+    overflow: hidden;
+    width: 341px;           /*341W 465H*/
 }
 
 .thirdColumndOfInterestFromLeft{
@@ -1066,6 +1070,8 @@
     grid-column: 4/5;
     grid-row: 2/3;
     background-color: blue;
+
+    width: fit-content;
 }
 
 .fifthColumnOfInterestFromLeft{
@@ -1132,6 +1138,8 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+
+  
 }
 
 .verticalSpaceAboveRightDivs{
@@ -1176,11 +1184,6 @@
     display: grid;
     grid-template-columns: 1fr 10fr;
     grid-template-rows: 1fr;
-
-    /*Crop picture inside to fit the DIV-dimension*/
-    overflow: hidden;
-    min-width: 341px;           /*341W 465H*/
-
 }
 
 .aboutMeHomeLeft{
@@ -1195,10 +1198,8 @@
     grid-row: 1/2;
     background-color: lightskyblue;
     height: 450px;
-    overflow: hidden;
-   
+    overflow: hidden;  
 }
-
 
 /*Divide aboutMeHomeLeft into two rows*/
 .aboutMeHomeLeft{
@@ -1214,7 +1215,6 @@
     background-color: orange;
     font-family: Sofia-Pro;
     
-
     /*Changes the writing mode inside of a div into vertical (right to left)*/
     writing-mode: vertical-rl;
 
@@ -1226,7 +1226,6 @@
     grid-column: 1/2;
     grid-row: 2/3;
     background-color: grey;    
-
 }
 
 /*Adjust container for*/
@@ -1238,7 +1237,6 @@
     justify-content: center;
     align-items: center;
 }
-
 
 .svgLineAboutMeHome{
     background-color: white;
@@ -1260,25 +1258,85 @@
     align-items: center;
 }
 
+/*============================================================================================*/
+/*================= Detailed styling of Web Development, area of interest ====================*/
+/*============================================================================================*/
+
+.webDevelopmentHome{
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: red;
+    width: 340px;
+}
+
+.webDevelopmentHomeLeft{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: burlywood;
+
+    width: fit-content;
+    height: 450px;
+    overflow: hidden; 
+}
+
+.webDevelopmentHomeRight{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: green;
+    text-align: center;
+
+    width: 36px;
+    height: 450px;
+    padding-right: 5px;
+
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.webDevelopmentHomeHeader{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-family: "Sofia-Pro";
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    /*Changes the writing mode inside of a div into vertical (right to left)*/
+    writing-mode: vertical-rl;
+}
+
+.svgLineWebDevelopmentHome{
+    background-color: aliceblue;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.webDevelopmentHomeNumber{
+    background-color: blueviolet;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    font-family: "Sofia-Pro";
+    height: fit-content;
+    /*Changes the writing mode inside of a div into vertical (right to left)*/
+    writing-mode: vertical-rl;
+}
 
 
-/*=================================================*/
-
-/*============== Zoom on main themes ==============*/
-
-/*=================================================*/
+/*===========================================================================================*/
+/*=========================== Zoom animation on areas of interest ===========================*/
+/*===========================================================================================*/
 
 /*Adding hover zoom on pictures aboutMe-Gaming*/
 .imgAboutMe{
-
     transition: transform 0.5s;
-
     /*Change cursor to hand, when hovering*/
     cursor: pointer;
 }
 
 .imgAboutMe:hover{
-
     transform: scale(1.15); 
 }
 
