@@ -1116,6 +1116,7 @@
     background-color: lightblue;
     font-family: "Austin";
     font-size: 88px;
+    line-height: 70px;
     color: white;
     text-align: center;
     top: 42%;  /*Sets the vertical distance between the navbar and the current div (paragraph containing wording EXPERTISE)*/
