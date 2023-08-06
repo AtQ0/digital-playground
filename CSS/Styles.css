@@ -1035,7 +1035,7 @@
 .areasOfInterestHome{
     display: grid;
     grid-template-columns: 1fr auto 2.5fr auto 1fr;
-    grid-template-rows: 100px 1515px 100px;
+    grid-template-rows: 160px 1515px 160px;
     background-color:transparent;
     height: auto;
 }
