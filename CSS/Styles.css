@@ -1034,7 +1034,7 @@
 /*Dividing areas of interest into five columns and three rows*/
 .areasOfInterestHome{
     display: grid;
-    grid-template-columns: 1fr 2fr 2.5fr 2fr 1fr;
+    grid-template-columns: 1fr auto 2.5fr auto 1fr;
     grid-template-rows: 100px 1515px 100px;
     background-color: white;
     height: auto;
@@ -1051,9 +1051,7 @@
     grid-row: 2/3;
     background-color: blue;       
 
-    /*Crop picture inside to fit the DIV-dimension*/
-    overflow: hidden;
-    width: 341px;           /*341W 465H*/
+
 }
 
 .thirdColumndOfInterestFromLeft{
@@ -1179,84 +1177,72 @@
 /*===================== Detailed styling of About ME, area of interest =======================*/
 /*============================================================================================*/
 
-/*Divide aboutMeHome into two columns*/
+
+/*================ Divide aboutMeHome into two columns =================*/
 .aboutMeHome{
     display: grid;
-    grid-template-columns: 1fr 10fr;
+    grid-template-columns: 36px 10fr;
     grid-template-rows: 1fr;
+    background-color: red;
 }
 
 .aboutMeHomeLeft{
     grid-column: 1/2;
     grid-row: 1/2;
-    background-color: lightgreen;
-    width: 32px;    /*Changes distance between text and picture*/
 }
 
 .aboutMeHomeRight{
     grid-column: 2/3;
     grid-row: 1/2;
-    background-color: lightskyblue;
-    height: 450px;
-    overflow: hidden;  
+    background-color: burlywood;
 }
 
-/*Divide aboutMeHomeLeft into two rows*/
+/*=========== Divide left column of about me into two rows ============*/
 .aboutMeHomeLeft{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 225px 225px;
+   width: 20px;  
+   height: 450px;
+   background-color: lightslategray;
 }
 
-
-.aboutMeHomeHeader{
+.containerHeaderAboutMe{
     grid-column: 1/2;
     grid-row: 1/2;
-    background-color: orange;
-    font-family: Sofia-Pro;
-    
-    /*Changes the writing mode inside of a div into vertical (right to left)*/
-    writing-mode: vertical-rl;
-
-    margin-left: 0px;
-    padding-left: 0px;
+    background-color: lightsalmon;
 }
 
-.aboutMeHomeLineANDNumber{
+.containerLineAndNumber{
     grid-column: 1/2;
     grid-row: 2/3;
-    background-color: grey;    
+    background-color: blueviolet;
+
 }
 
-/*Adjust container for*/
-.containerLineAndNumberAboutMe{
-    background-color: lightsteelblue;
-    width: 18.5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/*========== Styling of the content in left column of aboutMe ==========*/
+.containerHeaderAboutMe p{
+    font-family: Sofia-Pro;
+    background-color: aliceblue;
+     /*Changes the writing mode inside of a div into vertical (right to left)*/
+    writing-mode: vertical-rl;
+    margin: 0px;
+    margin-left: 5px;
+}
+
+.containerLineAndNumber p{
+    background-color: aliceblue;
+    font-family: Sofia-Pro;
+    /*Changes the writing mode inside of a div into vertical (right to left)*/
+    writing-mode: vertical-rl;
+    margin: 5px;
 }
 
 .svgLineAboutMeHome{
-    background-color: white;
+    background-color: aliceblue;
+    margin-left: 12px;
 }
 
-.aboutMeHomeNumber{
-    grid-column: 1/2;
-    grid-row: 1/2;
-    background-color: green;
-    font-family: Sofia-Pro;
-    
-    /*Changes the writing mode inside of a div into vertical (right to left)*/
-    writing-mode: vertical-rl;
-    width: 16px;
-    padding-left: 2.5px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 /*============================================================================================*/
 /*================= Detailed styling of Web Development, area of interest ====================*/
@@ -1312,6 +1298,7 @@
     background-color: aliceblue;
     grid-column: 1/2;
     grid-row: 2/3;
+    margin-right: 2px;
 }
 
 .webDevelopmentHomeNumber{
