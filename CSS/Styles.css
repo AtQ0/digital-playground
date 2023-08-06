@@ -1197,6 +1197,7 @@
     grid-column: 2/3;
     grid-row: 1/2;
     background-color: transparent;
+    overflow: hidden;
 }
 
 /*=========== Divide left column of about me into two rows ============*/
@@ -1267,6 +1268,7 @@
     grid-column: 2/3;
     grid-row: 1/2;
     background-color: transparent;
+    overflow: hidden;
 }
 
 /*=========== Divide left column of AppDev into two rows ============*/
@@ -1450,7 +1452,7 @@
 }
 
 /*===========================================================================================*/
-/*=========================== Zoom animation on areas of interest ===========================*/
+/*=========================== ZOOM animation on areas of interest ===========================*/
 /*===========================================================================================*/
 
 /*Adding hover zoom on pictures aboutMe-Gaming*/
@@ -1461,6 +1463,43 @@
 }
 
 .imgAboutMe:hover{
+    transform: scale(1.15); 
+}
+
+
+.imgAppDev{
+    transition: transform 0.5s;
+    /*Change cursor to hand, when hovering*/
+    cursor: pointer;
+}
+
+.imgAppDev:hover{
+    transform: scale(1.15); 
+    /*Change cursor to hand, when hovering*/
+    cursor: pointer;
+}
+
+
+.imgWebDev{
+    transition: transform 0.5s;
+    /*Change cursor to hand, when hovering*/
+    cursor: pointer;
+}
+
+.imgWebDev:hover{
+    transform: scale(1.15); 
+    /*Change cursor to hand, when hovering*/
+    cursor: pointer;
+}
+
+
+.imgGameDev{
+    transition: transform 0.5s;
+    /*Change cursor to hand, when hovering*/
+    cursor: pointer;
+}
+
+.imgGameDev:hover{
     transform: scale(1.15); 
 }
 
