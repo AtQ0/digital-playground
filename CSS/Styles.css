@@ -658,6 +658,10 @@
     background-color: transparent;
 }
 
+.headerInThirdSlideOfSliderHome{
+    color: black;
+}
+
 .containersForParagraphAndUnderlinesInSlider{
     background-color: transparent;
     margin-top: 20px;
@@ -746,7 +750,7 @@
     width: 100%;
     height: 1px;
     position: absolute;
-    background-color: white;
+    background-color: black;
 }
 
 .secondAnimatedUnderlineThirdSlide{
@@ -754,18 +758,24 @@
     height: 1px;
     position: absolute;
     transform: translateX(-200%);
-    background-color: white;
+    background-color: black;
 }
 
 
 /*======= Specific (for each slide) header and paragrah color styling ======*/
 .headerInFirstSlideOfSliderHome{
     color: black;
+
 }
 
 .paragraphInFirstSlideOfSliderHome{
     color: black;
 }
+
+.paragraphInThirdSlideOfSliderHome{
+    color: black;
+}
+
 
 
 /*=============================================================================================*/
