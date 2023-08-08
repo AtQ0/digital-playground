@@ -243,10 +243,10 @@ window.addEventListener('resize', () => {
 
 /*======= Anonymous function triggered by event, after the page has loaded =======*/
 document.addEventListener("DOMContentLoaded", function() {
-  var videoDiv = document.getElementById("videoSlide");
+  let videoDiv = document.getElementById("videoSlide");
 
   // Create a video element
-  var videoElement = document.createElement("video");
+  let videoElement = document.createElement("video");
   videoElement.muted = true;
   videoElement.autoplay = true;
   videoElement.loop = true;
@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", function() {
   videoElement.style.left = "0";
 
   // Create a source element within the video element
-  var sourceElement = document.createElement("source");
+  let sourceElement = document.createElement("source");
   sourceElement.src = "./00.Media/Video/trimmedShortBETTER.mp4";
 
   // Append the source element to the video element
@@ -269,7 +269,6 @@ document.addEventListener("DOMContentLoaded", function() {
   // Append the video element to the videoDic div
   videoDiv.appendChild(videoElement);
 });
-
 
 
 /*====================================================================================*/
