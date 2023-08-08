@@ -234,14 +234,16 @@ window.addEventListener('resize', () => {
   slide.style.transform = `translateY(${-slideHeight * index}px)`;
 });
 
+/*============================================================================================*/
+/*============================= LOAD SLIDER VIDEO TO SLIDER ==================================*/
+/*============================================================================================*/
 
-/*============================================================================================*/
-/*========= FIX Slow page due to video: LOAD video to slide2 element after page load =========*/
-/*============================================================================================*/
+/*FIX Slow page onLoad, due to video inside of slider =====*/
+/*Solution: load video to videoDiv-element after page load */
 
 /*======= Anonymous function triggered by event, after the page has loaded =======*/
 document.addEventListener("DOMContentLoaded", function() {
-  var slide2 = document.getElementById("slide2");
+  var videoDiv = document.getElementById("videoSlide");
 
   // Create a video element
   var videoElement = document.createElement("video");
@@ -264,8 +266,8 @@ document.addEventListener("DOMContentLoaded", function() {
   // Append the source element to the video element
   videoElement.appendChild(sourceElement);
 
-  // Append the video element to the slide2 div
-  slide2.appendChild(videoElement);
+  // Append the video element to the videoDic div
+  videoDiv.appendChild(videoElement);
 });
 
 
