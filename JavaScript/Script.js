@@ -235,6 +235,41 @@ window.addEventListener('resize', () => {
 });
 
 
+/*============================================================================================*/
+/*========= FIX Slow page due to video: LOAD video to slide2 element after page load =========*/
+/*============================================================================================*/
+
+/*======= Anonymous function triggered by event, after the page has loaded =======*/
+document.addEventListener("DOMContentLoaded", function() {
+  var slide2 = document.getElementById("slide2");
+
+  // Create a video element
+  var videoElement = document.createElement("video");
+  videoElement.muted = true;
+  videoElement.autoplay = true;
+  videoElement.loop = true;
+  videoElement.className = "vidsInSlider";
+
+  // Set the styles for the video element
+  videoElement.style.objectFit = "cover";
+  videoElement.style.width = "100%";
+  videoElement.style.height = "100%";
+  videoElement.style.top = "0";
+  videoElement.style.left = "0";
+
+  // Create a source element within the video element
+  var sourceElement = document.createElement("source");
+  sourceElement.src = "./00.Media/Video/trimmedShortBETTER.mp4";
+
+  // Append the source element to the video element
+  videoElement.appendChild(sourceElement);
+
+  // Append the video element to the slide2 div
+  slide2.appendChild(videoElement);
+});
+
+
+
 /*====================================================================================*/
 /*======= Change text color of nav and rotating logo depending on background =========*/
 /*====================================================================================*/

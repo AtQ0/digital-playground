@@ -618,13 +618,15 @@
     object-fit: cover;
 }
 
+/*See properties added by the javascript*/
+/*
 .vidsInSlider{
     object-fit: cover;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-}
+}*/
 
 .slide-content {
     position: absolute;
