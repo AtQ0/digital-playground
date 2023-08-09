@@ -258,6 +258,7 @@ document.addEventListener("DOMContentLoaded", function() {
   videoElement.style.height = "100%";
   videoElement.style.top = "0";
   videoElement.style.left = "0";
+  videoElement.style.zIndex = "-1";
 
   // Create a source element within the video element
   let sourceElement = document.createElement("source");
