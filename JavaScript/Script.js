@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Selecting elements from the DOM
 const paragraph = document.querySelector('.contentThirdColumnOfInterest');
-const parent = document.querySelector('.thirdColumndOfInterestFromLeft');
+const parent = document.querySelector('.thirdColumnOfInterestFromLeft');
 let isSticky = false;
 
 function handleScroll() {
