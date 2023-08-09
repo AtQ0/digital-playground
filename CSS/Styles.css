@@ -877,19 +877,22 @@
     background-color: rgb(255, 255, 255);
 }
 
+.shortAboutMe{
+    height: 100vh;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+
 .contactMeHome{
     height: 100vh;
     background-color: rgb(8, 30, 108);
 }
-.myProjectsHome{
-    height: 100vh;
-    background-color: orange;
-}
 
-.shortAboutMe{
-    height: 100vh;
-    background-color: rgb(255, 255, 255);
-}
 
 
 /*============================================================================================*/
@@ -948,7 +951,6 @@
     font-style: normal;
     letter-spacing: 10px;
     padding-left: 10px;
-    mix-blend-mode: difference;
 }
   
 .containerDiscoverAndUnderline {
@@ -1541,7 +1543,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .containerContactMeHome{
@@ -1551,6 +1552,13 @@
 
     
 }
+
+
+/*============================================================================================*/
+/*================================ Styling of Short About Me =================================*/
+/*============================================================================================*/
+
+
 
 
 
