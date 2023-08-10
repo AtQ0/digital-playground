@@ -1555,10 +1555,136 @@
 
 
 /*============================================================================================*/
-/*================================ Styling of Short About Me =================================*/
+/*============================ General Styling of Short About Me =============================*/
 /*============================================================================================*/
 
+.shortAboutMe{
+    background-color: green;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 55% 45%;
+    height: 160vh;
+    justify-content: center;
+    align-items: center;
+}
 
+.topShortAboutMe{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+    background-color: orange;   
+    position: relative;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomShortAboutMe{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*============================================================================================*/
+/*=========================== Detailed Styling of Short About Me =============================*/
+/*============================================================================================*/
+
+/*==== Detailed Styling of stopShortAboutMe ====*/
+.leftTopShortAboutMe{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: green;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.rightTopShortAboutMe{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middleTopShortAboutMe{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 20%;
+    background-color: transparent;
+    text-align: center;
+}
+
+.containerImgRightTopShortAboutMe{
+    width: 45%;
+    height: 55%;
+    background-color: lightyellow;
+}
+
+.topTitleShortAboutMe{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    background-color: transparent;   
+}
+
+
+/*==== Detailed Styling of middleTopShortAboutMe  ====*/
+
+.middleTopShortAboutMe h1{
+    font-family: Austin;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 68px;
+    line-height: 76px;
+    letter-spacing: 10px;
+}
+
+.containerDiscoverAndUnderlineShortAboutMe {
+    font-family: Sofia-Pro;
+}
+
+.topTitleShortAboutMe h1{
+    background-color: transparent;
+    color:  rgb(247, 225, 147); /*Inverted color of rgb(8, 30, 108)*/
+    font-family: Sofia-Pro;
+    /*Font added */
+    font-family: "Sofia-Pro";
+    font-size: 150px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 10px;
+    transform: scale(1.2, 1.0);
+    mix-blend-mode: difference;
+}
+
+
+/*THESE PICTURES MUST BE RE-DIMENSIONED AND TINTED OF COURSE*/
+/*YELLOW TINT SHOULD BE the yellwo from inverted color, and blue from rgb (8, 30, 108)*/
+
+.leftTopShortAboutMe img{
+    height: 100%;    
+    width: 100%;
+}
+
+.containerImgRightTopShortAboutMe img{
+    height: 100%;
+    width: 100%;
+}
 
 
 

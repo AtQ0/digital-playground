@@ -317,3 +317,20 @@ function handleScroll() {
 // Add a scroll event listener to call the handleScroll function on scroll
 window.addEventListener('scroll', handleScroll);
 
+
+
+/*====================================================================================*/
+/*================================= SHORT ABOUT ME ===================================*/
+/*====================================================================================*/
+
+/*=== Placing topTItleShortAboutMe on the bottom border of topShortAboutMe ===*/
+
+const topTitleShortAboutMe = document.getElementById("topTitleShortAboutMe");
+
+let heightOfTopTitleShortAboutMe = topTitleShortAboutMe.offsetHeight;
+
+let newHeight = heightOfTopTitleShortAboutMe / 2;
+
+topTitleShortAboutMe.style.bottom = "-" + newHeight + "px";
+
+
