@@ -875,6 +875,7 @@
 .areasOfInterestHome{
     height: 200px;
     background-color: rgb(255, 255, 255);
+    position: relative;
 }
 
 .shortAboutMe{
@@ -1079,7 +1080,6 @@
     grid-column: 4/5;
     grid-row: 2/3;
     background-color: transparent;
-
     width: fit-content;
 }
 
@@ -1107,8 +1107,9 @@
     grid-row: 1/2;
     background-color: transparent;
     height: 450px;
-    width:auto;
+    /*Crop picture inside to fit the DIV-dimension*/
     overflow: hidden;
+    min-width: 341px;           /*341W 465H*/
 }
 
 .verticalSpaceBetweenLeftDivs{
@@ -1117,7 +1118,7 @@
     grid-column: 1/2;
     grid-row: 2/3;
 }
-
+    
 .appDevHome{
     background-color: transparent;
     height: 450px;
@@ -1125,8 +1126,9 @@
     grid-column: 1/2;
     grid-row: 3/4;   
     height: 450px;
-    width:auto;
+    /*Crop picture inside to fit the DIV-dimension*/
     overflow: hidden;
+    min-width: 341px;           /*341W 465H*/
 }
 
 /*============ Styling of 3rd left (middle) column of area of interest divs =============*/
