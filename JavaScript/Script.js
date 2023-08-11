@@ -101,7 +101,6 @@ window.onscroll = function() {
   }
 };
 
-
 /*====================================================================================*/
 /*================================= Automatic Slider  ================================*/
 /*====================================================================================*/
@@ -228,20 +227,24 @@ btn03.addEventListener('click', () => {
 // Starting the auto-play on page load
 startSlide();
 
-// Handling the resize event to adjust the slide height
+// Function to update the video's size based on the slider's height
+const updateVideoSize = () => {
+  const videoElement = document.querySelector('.vidsInSlider');
+  videoElement.style.width = '100%';
+  videoElement.style.height = `${slideHeight}px`; // Set the video's height to match the slide's height
+};
+
+// Handling the resize event to adjust the slide height and update the video size
 window.addEventListener('resize', () => {
   slideHeight = slides[index].clientHeight;
   slide.style.transform = `translateY(${-slideHeight * index}px)`;
+  updateVideoSize(); // Call the function to update the video's size
 });
 
 /*============================================================================================*/
 /*============================= LOAD SLIDER VIDEO TO SLIDER ==================================*/
 /*============================================================================================*/
 
-/*FIX Slow page onLoad, due to video inside of slider =====*/
-/*Solution: load video to videoDiv-element after page load */
-
-/*======= Anonymous function triggered by event, after the page has loaded =======*/
 document.addEventListener("DOMContentLoaded", function() {
   let videoDiv = document.getElementById("videoSlide");
 
@@ -255,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Set the styles for the video element
   videoElement.style.objectFit = "cover";
   videoElement.style.width = "100%";
-  videoElement.style.height = "100%";
+  videoElement.style.height = `${slideHeight}px`; // Set the video's height to match the slide's height
   videoElement.style.top = "0";
   videoElement.style.left = "0";
   videoElement.style.zIndex = "-1";
@@ -267,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Append the source element to the video element
   videoElement.appendChild(sourceElement);
 
-  // Append the video element to the videoDic div
+  // Append the video element to the videoDiv div
   videoDiv.appendChild(videoElement);
 });
 
