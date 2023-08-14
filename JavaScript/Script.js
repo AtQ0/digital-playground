@@ -292,33 +292,8 @@ document.addEventListener("DOMContentLoaded", function() {
 /*================================ AREAS OF INTEREST =================================*/
 /*====================================================================================*/
 
-/*== Applying sticky to moving paragraph inside of thirdColumndOfInterestFromLeft ==*/
 
-//Selecting elements from the DOM
-const paragraph = document.querySelector('.contentThirdColumnOfInterest');
-const parent = document.querySelector('.thirdColumnOfInterestFromLeft');
-let isSticky = false;
 
-function handleScroll() {
-  const parentRect = parent.getBoundingClientRect();
-  const paragraphRect = paragraph.getBoundingClientRect();
-
-  // Calculate the threshold position where the paragraph should become sticky
-  const threshold = parentRect.top + parentRect.height * (1 / 5);
-
-  if (!isSticky && window.scrollY >= threshold) {
-    // Add the .sticky class and update the isSticky flag when the threshold is reached
-    paragraph.classList.add('sticky');
-    isSticky = true;
-  } else if (isSticky && window.scrollY < threshold) {
-    // Remove the .sticky class and update the isSticky flag if the user scrolls back above the threshold
-    paragraph.classList.remove('sticky');
-    isSticky = false;
-  }
-}
-
-// Add a scroll event listener to call the handleScroll function on scroll
-window.addEventListener('scroll', handleScroll);
 
 
 
