@@ -1672,6 +1672,9 @@
     letter-spacing: 10px;
     transform: scale(1.2, 1.0);
     mix-blend-mode: difference;
+
+    /*Property that makes (in this case) text unselectable by user*/
+    user-select: none;
 }
 
 
