@@ -286,12 +286,13 @@ const updateVideoSize = () => {
 };
 
 
-// Handling the resize event to update the video size
+// Handling the resize event to update the slider and video size
 window.addEventListener('resize', () => {
   slideHeight = slides[index].clientHeight;
   slide.style.transform = `translateY(${-slideHeight * index}px)`; // Update the slide position
   updateVideoSize(); // Call the function to update the video's size
 });
+
 
 
 /*============================================================================================*/
