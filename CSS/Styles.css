@@ -97,7 +97,7 @@
 
 .rotatingLogo{
     position: fixed;
-    top: 44%;
+    
     right: 15px;
     z-index: 4;
     display: flex; /* Use flexbox to center the SVG */
@@ -123,6 +123,16 @@
     stroke-width: 2px;
 }
 
+/*================= Terminate rotating Logo on small devices ===================*/
+
+/*On screens that have a width of XXX or less*/
+@media screen and (max-width: 600px) {
+
+    .rotatingLogo{
+        display: none;
+    }
+
+}
 
 
 /*============================================================================================*/
@@ -627,16 +637,6 @@
     object-fit: cover;
 }
 
-/*See properties added by the javascript*/
-/*
-.vidsInSlider{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}*/
-
 .slide-content {
     position: absolute;
     top: 50%;
@@ -776,7 +776,6 @@
 /*======= Specific (for each slide) header and paragrah color styling ======*/
 .headerInFirstSlideOfSliderHome{
     color: black;
-
 }
 
 .paragraphInFirstSlideOfSliderHome{

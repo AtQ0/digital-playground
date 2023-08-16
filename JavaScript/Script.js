@@ -51,6 +51,32 @@ let st = document.documentElement.scrollTop;
 }, false);
 
 /*============================================================================================*/
+/*========================= Adding Rotating Logo to center of vh =============================*/
+/*============================================================================================*/
+
+
+// Function to update the position of the rotatingLogo
+function updatePosition() {
+    // Getting height of rotating logo
+    var heightOfRotatingLogo = rotatingLogo.offsetHeight;
+
+    // Getting vertical center of the rotatingLogo
+    var centerOfDiv = heightOfRotatingLogo / 2;
+
+    var verticalCenterOfWindow = window.innerHeight / 2;
+
+    // Setting top (vertical position) for the rotatingLogo div
+    rotatingLogo.style.top = verticalCenterOfWindow - centerOfDiv + "px";
+}
+
+// Attach the updatePosition function to the resize event
+window.addEventListener('resize', updatePosition);
+
+// Call the updatePosition function on page load
+window.addEventListener('load', updatePosition);
+
+
+/*============================================================================================*/
 /*========================= Adding responsivness to Rotating Logo ============================*/
 /*============================================================================================*/
 
@@ -59,7 +85,7 @@ function resizeLogo() {
   const windowWidth = window.innerWidth;
 
   // Calculate the new logo size based on the window width
-  const newSize = Math.min(88, windowWidth * 0.1); // Adjust the multiplier as needed
+  const newSize = Math.min(88, windowWidth * 0.07); // Adjust the multiplier as needed
   logoContainer.style.height = newSize + 'px';
   logoContainer.style.width = newSize + 'px';
 }
@@ -69,6 +95,7 @@ window.addEventListener('resize', resizeLogo);
 
 // Call the resizing function on page load
 window.addEventListener('load', resizeLogo);
+
 
 
 
@@ -252,16 +279,20 @@ startSlide();
 // Function to update the video's size based on the slider's height
 const updateVideoSize = () => {
   const videoElement = document.querySelector('.vidsInSlider');
+  const currentSlide = slides[index];
+  const slideHeight = currentSlide.clientHeight;
   videoElement.style.width = '100%';
   videoElement.style.height = `${slideHeight}px`; // Set the video's height to match the slide's height
 };
 
-// Handling the resize event to adjust the slide height and update the video size
+
+// Handling the resize event to update the video size
 window.addEventListener('resize', () => {
   slideHeight = slides[index].clientHeight;
-  slide.style.transform = `translateY(${-slideHeight * index}px)`;
+  slide.style.transform = `translateY(${-slideHeight * index}px)`; // Update the slide position
   updateVideoSize(); // Call the function to update the video's size
 });
+
 
 /*============================================================================================*/
 /*============================= LOAD SLIDER VIDEO TO SLIDER ==================================*/
