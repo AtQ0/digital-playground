@@ -778,6 +778,17 @@
     color: black;
 }
 
+@media (max-width: 850px) {
+    
+    .slide-content h1
+    .headerInFirstSlideOfSliderHome {
+        overflow-wrap: break-word;
+        text-align: center; /* Adjust alignment if needed */
+    }
+
+
+}
+
 .paragraphInFirstSlideOfSliderHome{
     color: black;
 }
