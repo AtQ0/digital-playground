@@ -50,6 +50,28 @@ let st = document.documentElement.scrollTop;
   
 }, false);
 
+/*============================================================================================*/
+/*========================= Adding responsivness to Rotating Logo ============================*/
+/*============================================================================================*/
+
+function resizeLogo() {
+  const logoContainer = document.getElementById('rotatingLogo');
+  const windowWidth = window.innerWidth;
+
+  // Calculate the new logo size based on the window width
+  const newSize = Math.min(88, windowWidth * 0.1); // Adjust the multiplier as needed
+  logoContainer.style.height = newSize + 'px';
+  logoContainer.style.width = newSize + 'px';
+}
+
+// Attach the resize event listener
+window.addEventListener('resize', resizeLogo);
+
+// Call the resizing function on page load
+window.addEventListener('load', resizeLogo);
+
+
+
 /*=========================================================================================*/
 /*====================================== Sliding Div ======================================*/
 /*=========================================================================================*/

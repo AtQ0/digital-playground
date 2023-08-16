@@ -99,9 +99,13 @@
     position: fixed;
     top: 44%;
     right: 15px;
-    height: 88px;
-    width: 88px;
     z-index: 4;
+    display: flex; /* Use flexbox to center the SVG */
+    align-items: center;
+    justify-content: center;
+    height: 88px; /* Initial size */
+    width: 88px; /* Initial size */
+    transform-origin: center center; /* Set the rotation origin */
 
 }
 
@@ -274,6 +278,7 @@
     background-color: transparent;
 }
   
+
 /*============================================================================================*/
 /*============================ Animation of the Navigation Bar ===============================*/
 /*============================================================================================*/
@@ -393,6 +398,9 @@
         opacity: 1;
     }
 }
+
+
+
 
 /*============================================================================================*/
 /*=============== Horizontal (On-Hover) animation of the Burger and the Menu =================*/
