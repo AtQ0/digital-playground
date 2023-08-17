@@ -654,7 +654,7 @@
     padding-left: 10px; /*Added to compensate for the padding on the right, caused by letter spacing*/
     line-height: 68px;
     padding-bottom: 6px;
-    background-color: orange;
+    background-color: transparent;
     user-select: none;
     line-height: 88px;
 }
