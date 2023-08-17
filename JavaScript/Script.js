@@ -21,7 +21,7 @@ function constantRotationOfLogo(){
   CircularLogoDiv.style.rotate = degrees + "deg";
 };
 
-
+  
 /*============ Additional rotation of Circular Logo when srcolling up or down ===========*/
 
 let lastScrollTop = 0;
@@ -80,6 +80,10 @@ window.addEventListener('load', updatePosition);
 /*========================= Adding responsivness to Rotating Logo ============================*/
 /*============================================================================================*/
 
+// Keep track of the visibility state
+let logoVisible = true;
+
+
 function resizeLogo() {
   const logoContainer = document.getElementById('rotatingLogo');
   const windowWidth = window.innerWidth;
@@ -95,6 +99,31 @@ window.addEventListener('resize', resizeLogo);
 
 // Call the resizing function on page load
 window.addEventListener('load', resizeLogo);
+
+/*========================= Toggle logo visibility for small screens ============================*/
+
+window.addEventListener('resize', function() {
+  const windowWidth = window.innerWidth;
+
+  if (windowWidth <= 750) {
+    if (logoVisible) {
+      logoVisible = false;
+      CircularLogoDiv.style.display = "none";
+    }
+  } else {
+    if (!logoVisible) {
+      logoVisible = true;
+      CircularLogoDiv.style.display = "block";
+    }
+  }
+
+  // Call the updatePosition and resizeLogo functions to ensure proper positioning and sizing
+  updatePosition();
+  resizeLogo();
+});
+
+// Call the initial resize event to set the logo visibility
+window.dispatchEvent(new Event('resize'));
 
 
 

@@ -123,17 +123,6 @@
     stroke-width: 2px;
 }
 
-/*================= Terminate rotating Logo on small devices ===================*/
-
-/*On screens that have a width of XXX or less*/
-@media screen and (max-width: 600px) {
-
-    .rotatingLogo{
-        display: none;
-    }
-
-}
-
 
 /*============================================================================================*/
 /*========================= Styling of Header and its components =============================*/
@@ -654,7 +643,6 @@
 
 /*======== General (slider-specific) header and paragrah styling ========*/
 .slide-content h1 {
-    white-space: nowrap; /* Prevent line breaks */
     margin-bottom: 20px; /* Adjust the margin as needed */
     font-size: 100px;
     text-align: center;
@@ -666,8 +654,9 @@
     padding-left: 10px; /*Added to compensate for the padding on the right, caused by letter spacing*/
     line-height: 68px;
     padding-bottom: 6px;
-    background-color: transparent;
+    background-color: orange;
     user-select: none;
+    line-height: 88px;
 }
 
 .headerInThirdSlideOfSliderHome{
@@ -778,16 +767,6 @@
     color: black;
 }
 
-@media (max-width: 850px) {
-    
-    .slide-content h1
-    .headerInFirstSlideOfSliderHome {
-        overflow-wrap: break-word;
-        text-align: center; /* Adjust alignment if needed */
-    }
-
-
-}
 
 .paragraphInFirstSlideOfSliderHome{
     color: black;
