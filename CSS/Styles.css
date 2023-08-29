@@ -97,7 +97,7 @@
 
 .rotatingLogo{
     position: fixed;
-    
+    top: 44%;
     right: 15px;
     z-index: 4;
     display: flex; /* Use flexbox to center the SVG */
@@ -122,6 +122,7 @@
     stroke-miterlimit: 10;
     stroke-width: 2px;
 }
+
 
 
 /*============================================================================================*/
@@ -278,6 +279,7 @@
 }
   
 
+
 /*============================================================================================*/
 /*============================ Animation of the Navigation Bar ===============================*/
 /*============================================================================================*/
@@ -397,9 +399,6 @@
         opacity: 1;
     }
 }
-
-
-
 
 /*============================================================================================*/
 /*=============== Horizontal (On-Hover) animation of the Burger and the Menu =================*/
@@ -626,6 +625,16 @@
     object-fit: cover;
 }
 
+/*See properties added by the javascript*/
+/*
+.vidsInSlider{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}*/
+
 .slide-content {
     position: absolute;
     top: 50%;
@@ -643,6 +652,7 @@
 
 /*======== General (slider-specific) header and paragrah styling ========*/
 .slide-content h1 {
+    white-space: nowrap; /* Prevent line breaks */
     margin-bottom: 20px; /* Adjust the margin as needed */
     font-size: 100px;
     text-align: center;
@@ -656,7 +666,6 @@
     padding-bottom: 6px;
     background-color: transparent;
     user-select: none;
-    line-height: 88px;
 }
 
 .headerInThirdSlideOfSliderHome{
@@ -765,8 +774,8 @@
 /*======= Specific (for each slide) header and paragrah color styling ======*/
 .headerInFirstSlideOfSliderHome{
     color: black;
-}
 
+}
 
 .paragraphInFirstSlideOfSliderHome{
     color: black;
@@ -775,7 +784,6 @@
 .paragraphInThirdSlideOfSliderHome{
     color: black;
 }
-
 
 
 
