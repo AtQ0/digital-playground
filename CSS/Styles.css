@@ -5,7 +5,8 @@
 .bodyHome{
     background-color: rgb(255, 255, 255);
     margin: 0px;
-    padding: 0px;  
+    padding: 0px;
+    overflow-x: hidden; /*Turns off horizontal scroll*/
 }
 
 /*============================================================================================*/
@@ -46,7 +47,7 @@
     /*Places the content into center of this div*/
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
 
 .titleInSlidingDiv{
@@ -257,8 +258,8 @@
 }
 
 .search-icon-svg-home{
-    background-color: transparent; 
-       
+    background-color: transparent;
+
 }
 
 .containerLocationHome{
@@ -277,7 +278,7 @@
 .location-icon-svg-home{
     background-color: transparent;
 }
-  
+
 
 
 /*============================================================================================*/
@@ -300,7 +301,7 @@
 }
 
 @keyframes fadeInBurgerAndMenuHome {
-    
+
     0% {
        opacity: -1;
     }
@@ -312,7 +313,7 @@
 /*========== Slide down animation of the Top Homepage Title =============*/
 
 
-.mainContainerForTopTitleHome{ 
+.mainContainerForTopTitleHome{
     animation: 1.5s linear 0.35s slideDownMainContainerForTopTitleHome;
 
 }
@@ -332,7 +333,7 @@
 }
 
 @keyframes fadeInMainContainerForTopTitleHome {
-    
+
     0% {
        opacity: -1;
     }
@@ -362,7 +363,7 @@
 }
 
 @keyframes fadeInContainerSearchHome {
-    
+
     0% {
        opacity: -1;
     }
@@ -391,7 +392,7 @@
 }
 
 @keyframes fadeInContainerLocationHome {
-    
+
     0% {
        opacity: -1;
     }
@@ -473,7 +474,7 @@
     height: 42px;
     width: fit-content;
     overflow: hidden;
-    pointer-events: none; 
+    pointer-events: none;
     /*Places the content into center of this div*/
     display: flex;
     justify-content: center;
@@ -491,7 +492,7 @@
     position: absolute;
     height: 42px;
     width: fit-content;
-    overflow: hidden; 
+    overflow: hidden;
     /*Places the content into center of this div*/
     display: flex;
     justify-content: center;
@@ -514,7 +515,7 @@
 }
 
 .containerSearchHome:hover{
-    transform: scale(1.15); 
+    transform: scale(1.15);
 }
 
 .containerLocationHome{
@@ -522,7 +523,7 @@
 }
 
 .containerLocationHome:hover{
-    transform: scale(1.15); 
+    transform: scale(1.15);
 }
 
 
@@ -537,7 +538,7 @@
     background-color: transparent;
     position: absolute;
     top: 39%;
-    left: 4.75%;    
+    left: 4.75%;
 }
 
 .btnPrev{
@@ -652,7 +653,6 @@
 
 /*======== General (slider-specific) header and paragrah styling ========*/
 .slide-content h1 {
-    white-space: nowrap; /* Prevent line breaks */
     margin-bottom: 20px; /* Adjust the margin as needed */
     font-size: 100px;
     text-align: center;
@@ -662,7 +662,7 @@
     font-style: normal;
     letter-spacing: 10px;
     padding-left: 10px; /*Added to compensate for the padding on the right, caused by letter spacing*/
-    line-height: 68px;
+    line-height: 98px;
     padding-bottom: 6px;
     background-color: transparent;
     user-select: none;
@@ -717,7 +717,7 @@
 
 .containerSecondUnderlineSlider{
     width: 118.8px;
-    
+
 }
 
 .containerThirdUnderlineSlider{
@@ -814,7 +814,7 @@
 .containerForParagraphAndUnderlineInFirstSlide .secondAnimatedUnderlineFirstSlide {
     transition: transform 0.75s ease; /* Apply a linear transition to smoothly animate the second underline */
 }
-  
+
 
 /*===== Animation of the two underline divs situated in the second slide of Slider =====*/
 
@@ -919,9 +919,9 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
- 
+
 }
-  
+
 .rightHighlight {
     background-color: rgb(8, 30, 108);
     width: 50%;
@@ -934,7 +934,7 @@
     align-items: center;
     overflow: hidden;
 }
-  
+
 .middleHighlight {
     background-color: transparent;
     width: 8%;
@@ -945,7 +945,7 @@
     align-items: center;
     flex-direction: column;
 }
-  
+
 .middleHighlight h1 {
     background-color: transparent;
     position: relative;
@@ -962,7 +962,7 @@
     padding-left: 10px;
     user-select: none;
 }
-  
+
 .containerDiscoverAndUnderline {
     background-color: transparent;
     padding: 0;
@@ -976,7 +976,7 @@
     margin-top: 20px;
     overflow: hidden;
 }
-  
+
 .middleHighlight p {
     background-color: transparent;
     color: white;
@@ -989,28 +989,28 @@
     letter-spacing: 2px;
     padding-left: 1px;
 }
-  
+
 .containerUnderlineHighlight {
     display: flex;
     cursor: pointer;
     margin-top: 2px;
     background-color: transparent;
 }
-  
+
 .firstAnimatedUnderlineHighlight {
     background-color: white;
     width: 125px;
     height: 1px;
     transform: translateX(-62.5px);
 }
-  
+
 .secondAnimatedUnderlineHighlight {
     background-color: white;
     width: 125px;
     height: 1px;
     transform: translateX(-250px);
 }
-  
+
 .pageSketch {
     width: 100%;
     height: 100%;
@@ -1022,7 +1022,7 @@
     height: 45%;
     object-fit: cover;
 }
-  
+
 
 
 /*============================================================================================*/
@@ -1055,14 +1055,14 @@
 
 .areasOfInterestHome{
     background-color: lightgreen;
-    height: 1520px; 
+    height: 1520px;
     width: 100%;
     padding-top: 150px;
     padding-bottom: 150px;
 
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .firstColumnsOfInterestFromLeft{
@@ -1073,7 +1073,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
- 
+
 }
 
 .secondColumnsOfInterestFromLeft{
@@ -1112,7 +1112,7 @@
     font-weight:normal;
     line-height: 88px;
     user-select: none;
-    
+
 }
 
 /*============================================================================================*/
@@ -1176,7 +1176,7 @@
 }
 
 .imgAboutMe:hover{
-    transform: scale(1.15); 
+    transform: scale(1.15);
 }
 
 
@@ -1187,7 +1187,7 @@
 }
 
 .imgAppDev:hover{
-    transform: scale(1.15); 
+    transform: scale(1.15);
     /*Change cursor to hand, when hovering*/
     cursor: pointer;
 }
@@ -1200,7 +1200,7 @@
 }
 
 .imgWebDev:hover{
-    transform: scale(1.15); 
+    transform: scale(1.15);
     /*Change cursor to hand, when hovering*/
     cursor: pointer;
 }
@@ -1213,7 +1213,7 @@
 }
 
 .imgGameDev:hover{
-    transform: scale(1.15); 
+    transform: scale(1.15);
 }
 
 
@@ -1233,7 +1233,7 @@
     width: 50%;
     height: auto;
 
-    
+
 }
 
 .rightContactHome{
@@ -1250,7 +1250,7 @@
     width: 70%;
     height: 250px;
 
-    
+
 }
 
 
@@ -1273,10 +1273,10 @@
     grid-row: 1/2;
     width: 100%;
     height: 100%;
-    background-color: orange;   
+    background-color: orange;
     position: relative;
 
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1339,7 +1339,7 @@
     width: fit-content;
     height: fit-content;
     position: absolute;
-    background-color: transparent;   
+    background-color: transparent;
 }
 
 
@@ -1381,7 +1381,7 @@
 /*YELLOW TINT SHOULD BE the yellwo from inverted color, and blue from rgb (8, 30, 108)*/
 
 .leftTopShortAboutMe img{
-    height: 100%;    
+    height: 100%;
     width: 100%;
 }
 
@@ -1402,7 +1402,3 @@
     height: 330px;
     width: 100%;
 }
-
-
-
-

@@ -11,24 +11,24 @@ const CircularLogoDiv = document.getElementById("rotatingLogo");
 
 //Use an setInterval to fall a function over and over again
 setInterval(constantRotationOfLogo, 10);
-//Declare a variable that will decide the amount of degress the Logo should rotate 
+//Declare a variable that will decide the amount of degress the Logo should rotate
 let degrees = 0;
 //Function that is called by the setInterval
 function constantRotationOfLogo(){
-  //Add -0.25 degrees to variable degree for every time this function is called 
+  //Add -0.25 degrees to variable degree for every time this function is called
   degrees -= 0.30;
   //Rotate the CurcularLogoDiv anti clockwise an additional -0.25 degres every time function is called
   CircularLogoDiv.style.rotate = degrees + "deg";
 };
 
-  
+
 /*============ Additional rotation of Circular Logo when srcolling up or down ===========*/
 
 let lastScrollTop = 0;
 
 window.addEventListener("scroll", function(){
 let st = document.documentElement.scrollTop;
-   
+
   if (st > lastScrollTop){
     //When Scrolling down: rotate logo anti-clockwise
     degrees -= 2.5;
@@ -39,15 +39,15 @@ let st = document.documentElement.scrollTop;
     degrees += 3.5;
     CircularLogoDiv.style.rotate = degrees + "deg";
   }
-  
-  //The below if-statement can be written in similar fashion: lastScrollTop = st <= 0 ? 0 : st; 
+
+  //The below if-statement can be written in similar fashion: lastScrollTop = st <= 0 ? 0 : st;
   //For Mobile or negative scrolling
   if (st <= 0) {
     lastScrollTop = 0;
   } else {
     lastScrollTop = st;
   }
-  
+
 }, false);
 
 /*============================================================================================*/
@@ -105,7 +105,7 @@ window.addEventListener('load', resizeLogo);
 window.addEventListener('resize', function() {
   const windowWidth = window.innerWidth;
 
-  if (windowWidth <= 750) {
+  if (windowWidth <= 767) {
     if (logoVisible) {
       logoVisible = false;
       CircularLogoDiv.style.display = "none";
@@ -157,7 +157,7 @@ const mainContainerForTopTitleHome = document.getElementById("mainContainerForTo
 
 window.onscroll = function() {
   let scrollLimit = 50;
-  if (window.scrollY > scrollLimit) {    
+  if (window.scrollY > scrollLimit) {
     //Moving small container right
     smallContainerForTopTitleHome.classList.remove("smallContainerForTopTitleHome");
     smallContainerForTopTitleHome.classList.remove("moveSmallContainerForTopTitleHomeBackLeft");
@@ -175,7 +175,7 @@ window.onscroll = function() {
 
     //Moving large container back right
     largeContainerForTopTitleHome.classList.remove("moveLargeContainerForTopTitleHomeLeft");
-    largeContainerForTopTitleHome.classList.add("moveLargeContainerForTopTitleHomeBackRight"); 
+    largeContainerForTopTitleHome.classList.add("moveLargeContainerForTopTitleHomeBackRight");
   }
 };
 
@@ -230,7 +230,7 @@ const getSlides = () => document.querySelectorAll('.slide');
 // Event listener for the transitionend event
 slide.addEventListener('transitionend', () => {
   slides = getSlides();
-  
+
   // Handling transition when reaching the first clone
   if (slides[index].id === firstClone.id) {
     slide.style.transition = 'none';
@@ -393,5 +393,3 @@ let heightOfTopTitleShortAboutMe = topTitleShortAboutMe.offsetHeight;
 let newHeight = heightOfTopTitleShortAboutMe / 2;
 
 topTitleShortAboutMe.style.bottom = "-" + newHeight + "px";
-
-
