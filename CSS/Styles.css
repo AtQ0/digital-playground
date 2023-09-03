@@ -142,7 +142,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    background-color: transparent;
     position: relative;
     z-index: 4;
 }
@@ -217,7 +217,6 @@
     align-items: center;
 }
 .lettersInTopTitleHome{
-    color: pink;
     background-color: transparent;
     font-size: 46px;
     font-weight: bold;
@@ -279,6 +278,35 @@
     background-color: transparent;
 }
 
+
+/*============================================================================================*/
+/*========================= Adding responsivness to Navigation Bar ===========================*/
+/*============================================================================================*/
+
+@media screen and (max-width:767px) {
+
+    .containerSearchHome{
+        visibility: hidden;
+    }
+
+    .mainContainerForTopTitleHome{
+        left: 170px;
+        top: 13.5px;
+    }
+
+    .containerLocationHome{
+        left: auto;
+        right: 140px;
+        top: 24px;
+
+    }
+
+    .containerBurgerAndMenuHome{
+        left: auto;
+        right: 20px;
+        top: 22px;
+    }
+}
 
 
 /*============================================================================================*/
