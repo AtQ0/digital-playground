@@ -133,7 +133,7 @@
 /*========== Regular styling of Header and its components =============*/
 
 .headerHome{
-    background-color: yellow;
+    background-color: brown;
     height: 100vh;
 }
 
@@ -283,12 +283,15 @@
 /*========================= Adding responsivness to Navigation Bar ===========================*/
 /*============================================================================================*/
 
+/*Responsivness when screen turns to ipad*/
 @media screen and (max-width:767px) {
 
+    /*Hide away the search icon*/
     .containerSearchHome{
         visibility: hidden;
     }
 
+    /*=== Re-position the navBar buttons ===*/
     .mainContainerForTopTitleHome{
         left: 170px;
         top: 13.5px;
@@ -305,6 +308,11 @@
         left: auto;
         right: 20px;
         top: 22px;
+    }
+
+    /*Hide away the last name spans in titlecutter*/
+    .letterCInTopTitle, .letterIInTopTitle, .letterB2InTopTitle, .letterA2InTopTitle, .letterB1InTopTitle, .space{
+       visibility: hidden;
     }
 }
 
@@ -532,6 +540,55 @@
 .moveLargeContainerForTopTitleHomeBackRight{
     transform: translateX(0px);
 }
+
+/*============================================================================================*/
+/*================== Changing Animation of titlecutter to smaller screen ====================*/
+/*============================================================================================*/
+
+/*Responsivness when screen turns to ipad*/
+@media screen and (max-width:767px) {
+
+
+    .sliderHome{
+        visibility: hidden;
+    }
+
+    .mainContainerForTopTitleHome{
+        background-color: lightblue;
+    }
+
+    .largeContainerForTopTitleHome{
+        background-color: white;
+    }
+
+    .smallContainerForTopTitleHome{
+        background-color: purple;
+    }
+
+    .moveSmallContainerForTopTitleHomeRight{
+        background-color: purple;
+        transform: translateX(315px);
+    }
+
+    .moveSmallContainerForTopTitleHomeBackLeft{
+        background-color: purple;
+        transform: translateX(0px);
+    }
+
+    .moveLargeContainerForTopTitleHomeLeft{
+        background-color: white;
+        transform: translateX(-315px);
+    }
+
+    .moveLargeContainerForTopTitleHomeBackRight{
+        background-color: white;
+        transform: translateX(0px);
+    }
+
+}
+
+
+
 
 /*============================================================================================*/
 /*============== Animation/Transformation of the Search and Location Icons ===================*/
