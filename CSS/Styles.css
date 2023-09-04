@@ -133,7 +133,7 @@
 /*========== Regular styling of Header and its components =============*/
 
 .headerHome{
-    background-color: brown;
+    background-color: orange;
     height: 100vh;
 }
 
@@ -293,7 +293,7 @@
 
     /*=== Re-position the navBar buttons ===*/
     .mainContainerForTopTitleHome{
-        left: 170px;
+        left: 13px;
         top: 13.5px;
     }
 
@@ -313,6 +313,10 @@
     /*Hide away the last name spans in titlecutter*/
     .letterCInTopTitle, .letterIInTopTitle, .letterB2InTopTitle, .letterA2InTopTitle, .letterB1InTopTitle, .space{
        visibility: hidden;
+    }
+
+    .lettersInTopTitleHome{
+        font-size: 6vw;
     }
 }
 
@@ -548,41 +552,56 @@
 /*Responsivness when screen turns to ipad*/
 @media screen and (max-width:767px) {
 
-
-    .sliderHome{
-        visibility: hidden;
-    }
-
     .mainContainerForTopTitleHome{
-        background-color: lightblue;
+        display: flex;
+        justify-content: start;
+        align-items: center;
     }
 
     .largeContainerForTopTitleHome{
-        background-color: white;
+        width: 160px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
     }
 
     .smallContainerForTopTitleHome{
-        background-color: purple;
+        width: 160px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
     }
 
     .moveSmallContainerForTopTitleHomeRight{
-        background-color: purple;
-        transform: translateX(315px);
+        transform: translateX(117px);
+        width: 160px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
     }
 
     .moveSmallContainerForTopTitleHomeBackLeft{
-        background-color: purple;
         transform: translateX(0px);
+        width: 160px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
     }
 
     .moveLargeContainerForTopTitleHomeLeft{
-        background-color: white;
-        transform: translateX(-315px);
+        transform: translateX(-117px);
+        width: 160px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
     }
 
     .moveLargeContainerForTopTitleHomeBackRight{
-        background-color: white;
         transform: translateX(0px);
+        width: 160px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
     }
 
 }
