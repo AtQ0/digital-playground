@@ -557,8 +557,6 @@
 @media screen and (max-width:767px) {
 
     .mainContainerForTopTitleHome{
-        background-color: yellow;
-
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -566,22 +564,23 @@
     }
 
     .largeContainerForTopTitleHome{
-        background-color: red;
+        background-color: transparent;
         width: 100%;
         justify-content: flex-start;
     }
 
     .smallContainerForTopTitleHome{
-        background-color: aliceblue;
+        background-color: transparent;
         text-align: left;
         justify-content: flex-start;
         width: 100%;
+        padding-left: 0.8vw;
 
     }
 
-    /*Move small*/
+    /*Move small container*/
     .moveSmallContainerForTopTitleHomeRight{
-        background-color: aliceblue;
+        background-color: transparent;
         text-align: left;
         justify-content: flex-start;
         width: 100%;
@@ -591,12 +590,13 @@
         padding-left: 0.8vw;
     }
 
+    /*Turn over movement of the small container*/
     .moveSmallContainerForTopTitleHomeRight{
         transform: none;
     }
 
     .moveSmallContainerForTopTitleHomeBackLeft{
-        background-color: aliceblue;
+        background-color: transparent;
         text-align: left;
         justify-content: flex-start;
         width: 100%;
@@ -604,9 +604,9 @@
         padding-left: 0.8vw;
     }
 
-    /*Move large*/
+    /*Move large container*/
     .moveLargeContainerForTopTitleHomeLeft{
-        background-color: red;
+        background-color: transparent;
         width: 100%;
         justify-content: flex-start;
         transform: none;
@@ -618,7 +618,7 @@
     }
 
     .moveLargeContainerForTopTitleHomeBackRight{
-        background-color: red;
+        background-color: transparent;
         width: 100%;
         justify-content: flex-start;
         transition: width 0.75s;
@@ -629,12 +629,11 @@
     }
 
 
-    .letterA1InTopTitle{
-        background-color: orange;
-    }
 }
 
-/*Additional calibration of the transition of width for the cutter*/
+/* DELETE THIS. SEEMS LIKE ITS NOT NEEDED.
+
+
 @media screen and (max-width:610px) {
 
     .moveLargeContainerForTopTitleHomeLeft{
@@ -663,7 +662,7 @@
         width: 25.5%;
     }
 }
-
+*/
 
 /*============================================================================================*/
 /*============== Animation/Transformation of the Search and Location Icons ===================*/
