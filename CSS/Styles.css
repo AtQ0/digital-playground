@@ -317,6 +317,7 @@
 
     .lettersInTopTitleHome{
         font-size: 6vw;
+        letter-spacing: 1.25vw;
     }
 }
 
@@ -549,64 +550,119 @@
 /*================== Changing Animation of titlecutter to smaller screen ====================*/
 /*============================================================================================*/
 
+/*Measurements to keep in mind in relation to screens 320 768 980*/
+/*Always put your media queries below (at the end of) original functionality*/
+
 /*Responsivness when screen turns to ipad*/
 @media screen and (max-width:767px) {
 
     .mainContainerForTopTitleHome{
+        background-color: yellow;
+
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: center;
+        width: 21vw;
     }
 
     .largeContainerForTopTitleHome{
-        width: 160px;
-        display: flex;
-        justify-content: start;
-        align-items: center;
+        background-color: red;
+        width: 100%;
+        justify-content: flex-start;
     }
 
     .smallContainerForTopTitleHome{
-        width: 160px;
-        display: flex;
-        justify-content: start;
-        align-items: center;
+        background-color: aliceblue;
+        text-align: left;
+        justify-content: flex-start;
+        width: 100%;
+
+    }
+
+    /*Move small*/
+    .moveSmallContainerForTopTitleHomeRight{
+        background-color: aliceblue;
+        text-align: left;
+        justify-content: flex-start;
+        width: 100%;
+        height: fit-content;
+        transition: transform;
+        margin-left: 0;
+        padding-left: 0.8vw;
     }
 
     .moveSmallContainerForTopTitleHomeRight{
-        transform: translateX(117px);
-        width: 160px;
-        display: flex;
-        justify-content: start;
-        align-items: center;
+        transform: none;
     }
 
     .moveSmallContainerForTopTitleHomeBackLeft{
-        transform: translateX(0px);
-        width: 160px;
-        display: flex;
-        justify-content: start;
-        align-items: center;
+        background-color: aliceblue;
+        text-align: left;
+        justify-content: flex-start;
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0.8vw;
+    }
+
+    /*Move large*/
+    .moveLargeContainerForTopTitleHomeLeft{
+        background-color: red;
+        width: 100%;
+        justify-content: flex-start;
+        transform: none;
+        transition: width 0.75s;
     }
 
     .moveLargeContainerForTopTitleHomeLeft{
-        transform: translateX(-117px);
-        width: 160px;
-        display: flex;
-        justify-content: start;
-        align-items: center;
+        width: 25%;
     }
 
     .moveLargeContainerForTopTitleHomeBackRight{
-        transform: translateX(0px);
-        width: 160px;
-        display: flex;
-        justify-content: start;
-        align-items: center;
+        background-color: red;
+        width: 100%;
+        justify-content: flex-start;
+        transition: width 0.75s;
     }
 
+    .moveLargeContainerForTopTitleHomeBackRight{
+        width: 100%;
+    }
+
+
+    .letterA1InTopTitle{
+        background-color: orange;
+    }
+}
+
+/*Additional calibration of the transition of width for the cutter*/
+@media screen and (max-width:610px) {
+
+    .moveLargeContainerForTopTitleHomeLeft{
+        width: 25.5%;
+    }
 }
 
 
+@media screen and (max-width:540px) {
+
+    .moveLargeContainerForTopTitleHomeLeft{
+        width: 25.8%;
+    }
+}
+
+@media screen and (max-width:490px) {
+
+    .moveLargeContainerForTopTitleHomeLeft{
+        width: 26%;
+    }
+}
+
+@media screen and (max-width:340px) {
+
+    .moveLargeContainerForTopTitleHomeLeft{
+        width: 25.5%;
+    }
+}
 
 
 /*============================================================================================*/
