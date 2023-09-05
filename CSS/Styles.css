@@ -610,7 +610,7 @@
         width: 100%;
         justify-content: flex-start;
         transform: none;
-        transition: width 0.75s;
+        transition: width 0.5s;
     }
 
     .moveLargeContainerForTopTitleHomeLeft{
@@ -621,48 +621,41 @@
         background-color: transparent;
         width: 100%;
         justify-content: flex-start;
-        transition: width 0.75s;
+        transition: width 0.5s;
     }
 
     .moveLargeContainerForTopTitleHomeBackRight{
         width: 100%;
     }
-
-
 }
 
-/* DELETE THIS. SEEMS LIKE ITS NOT NEEDED.
+/*Adding additional media query to ensure font size stays constant below 500px*/
+@media screen and (max-width:500px) {
 
+    .lettersInTopTitleHome{
+        font-size: 30px;
+        letter-spacing: 6px;
+    }
 
-@media screen and (max-width:610px) {
+    /*Adjusting additional markers to ensure titlecutting is works fine*/
+    .mainContainerForTopTitleHome{
+        min-width: 105px;
+    }
 
     .moveLargeContainerForTopTitleHomeLeft{
-        width: 25.5%;
+        width: 24.5%;
     }
+
+    .moveSmallContainerForTopTitleHomeBackLeft{
+        padding-left: 4px;
+    }
+
+    .moveSmallContainerForTopTitleHomeRight{
+        padding-left: 4px;
+    }
+
 }
 
-
-@media screen and (max-width:540px) {
-
-    .moveLargeContainerForTopTitleHomeLeft{
-        width: 25.8%;
-    }
-}
-
-@media screen and (max-width:490px) {
-
-    .moveLargeContainerForTopTitleHomeLeft{
-        width: 26%;
-    }
-}
-
-@media screen and (max-width:340px) {
-
-    .moveLargeContainerForTopTitleHomeLeft{
-        width: 25.5%;
-    }
-}
-*/
 
 /*============================================================================================*/
 /*============== Animation/Transformation of the Search and Location Icons ===================*/
