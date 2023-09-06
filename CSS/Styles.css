@@ -1551,13 +1551,15 @@
 /*YELLOW TINT SHOULD BE the yellwo from inverted color, and blue from rgb (8, 30, 108)*/
 
 .leftTopShortAboutMe img{
-    height: 100%;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .containerImgRightTopShortAboutMe img{
-    height: 100%;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /*=====================================================================*/
