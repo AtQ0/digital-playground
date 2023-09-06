@@ -385,6 +385,8 @@ document.addEventListener("DOMContentLoaded", function() {
 /*================================= SHORT ABOUT ME ===================================*/
 /*====================================================================================*/
 
+
+
 /*=== Placing topTItleShortAboutMe on the bottom border of topShortAboutMe ===*/
 
 const topTitleShortAboutMe = document.getElementById("topTitleShortAboutMe");
