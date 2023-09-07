@@ -2,11 +2,12 @@
 /*================================== CSS STYLING FOR THE PAGE ================================*/
 /*============================================================================================*/
 
-.bodyHome{
+.bodyHome {
     background-color: rgb(255, 255, 255);
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; /*Turns off horizontal scroll*/
+    overflow-x: hidden;
+    /*Turns off horizontal scroll*/
 }
 
 /*============================================================================================*/
@@ -15,7 +16,8 @@
 
 @font-face {
     font-family: "Austin";
-    src: url("../00.Media/Fonts/Austin-Light.otf") format("opentype"); /*Perhaps i need woff format*/
+    src: url("../00.Media/Fonts/Austin-Light.otf") format("opentype");
+    /*Perhaps i need woff format*/
     font-weight: light;
     font-style: normal;
 
@@ -36,7 +38,7 @@
 
 
 /*============ Regular styling of sliding div components =============*/
-.slidingDiv{
+.slidingDiv {
     background-color: rgb(8, 30, 108);
     color: white;
     width: 100%;
@@ -50,24 +52,24 @@
     align-items: center;
 }
 
-.titleInSlidingDiv{
+.titleInSlidingDiv {
     margin: 0 auto;
     font-size: 36px;
     font-family: "Sofia-pro";
     letter-spacing: 4px;
-    transform: scale(1.2,1);
+    transform: scale(1.2, 1);
     font-weight: bold;
 }
 
 
 /*==== Animation of Sliding div and Fade-out of Title in Sliding Div ====*/
 
-.slidingDiv{
+.slidingDiv {
     /* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
     animation: 0.7s ease-in-out 0.7s slideDownSlidingDiv;
 }
 
-.titleInSlidingDiv{
+.titleInSlidingDiv {
     animation: 0.4s ease-in 0.3s forwards fadeOutTitleInSlidingDiv;
 }
 
@@ -76,6 +78,7 @@
     0% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(100%);
     }
@@ -85,6 +88,7 @@
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -96,17 +100,21 @@
 
 /*=============== Regular styling of Circular SVG Logo ================*/
 
-.rotatingLogo{
+.rotatingLogo {
     position: fixed;
     top: 44%;
     right: 15px;
     z-index: 4;
-    display: flex; /* Use flexbox to center the SVG */
+    display: flex;
+    /* Use flexbox to center the SVG */
     align-items: center;
     justify-content: center;
-    height: 88px; /* Initial size */
-    width: 88px; /* Initial size */
-    transform-origin: center center; /* Set the rotation origin */
+    height: 88px;
+    /* Initial size */
+    width: 88px;
+    /* Initial size */
+    transform-origin: center center;
+    /* Set the rotation origin */
 
 }
 
@@ -132,12 +140,12 @@
 
 /*========== Regular styling of Header and its components =============*/
 
-.headerHome{
+.headerHome {
     background-color: orange;
     height: 100vh;
 }
 
-.navBarHome{
+.navBarHome {
     /*Places the content into center of this div*/
     display: flex;
     justify-content: center;
@@ -147,7 +155,7 @@
     z-index: 4;
 }
 
-.containerBurgerAndMenuHome{
+.containerBurgerAndMenuHome {
     background-color: transparent;
     height: 20px;
     width: 85px;
@@ -158,14 +166,14 @@
     cursor: pointer;
 }
 
-.burgerDivHome{
+.burgerDivHome {
     width: 30px;
     height: 20px;
     background-color: transparent;
     float: left;
 }
 
-.menuDivHome{
+.menuDivHome {
     float: center;
     background-color: transparent;
     height: 20px;
@@ -177,7 +185,7 @@
     align-items: center;
 }
 
-.mainContainerForTopTitleHome{
+.mainContainerForTopTitleHome {
     background-color: transparent;
     position: fixed;
     height: 44px;
@@ -190,7 +198,7 @@
     user-select: none;
 }
 
-.largeContainerForTopTitleHome{
+.largeContainerForTopTitleHome {
     background-color: transparent;
     position: absolute;
     height: 42px;
@@ -203,7 +211,7 @@
     white-space: nowrap;
 }
 
-.smallContainerForTopTitleHome{
+.smallContainerForTopTitleHome {
     background-color: transparent;
     font-size: 46px;
     font-weight: bold;
@@ -216,7 +224,8 @@
     justify-content: center;
     align-items: center;
 }
-.lettersInTopTitleHome{
+
+.lettersInTopTitleHome {
     background-color: transparent;
     font-size: 46px;
     font-weight: bold;
@@ -234,21 +243,22 @@
     transform: scale(1.2, 1.0);
 }
 
-.space{
+.space {
     padding-right: 10px;
 }
 
-.linkInTopTitleHome{
+.linkInTopTitleHome {
     color: black;
     text-decoration: none;
 }
 
-.containerSearchHome{
+.containerSearchHome {
     background-color: transparent;
     padding: 2px;
     position: fixed;
     top: 38px;
-    left: 87.5%; /*87.5%*/
+    left: 87.5%;
+    /*87.5%*/
     /*Places the content into center of this div*/
     display: flex;
     justify-content: center;
@@ -256,17 +266,18 @@
     cursor: pointer;
 }
 
-.search-icon-svg-home{
+.search-icon-svg-home {
     background-color: transparent;
 
 }
 
-.containerLocationHome{
+.containerLocationHome {
     background-color: transparent;
     padding: 2px;
     position: fixed;
     top: 37px;
-    left: 94%; /*94%*/
+    left: 94%;
+    /*94%*/
     /*Places the content into center of this div*/
     display: flex;
     justify-content: center;
@@ -274,7 +285,7 @@
     cursor: pointer;
 }
 
-.location-icon-svg-home{
+.location-icon-svg-home {
     background-color: transparent;
 }
 
@@ -287,35 +298,40 @@
 @media screen and (max-width:767px) {
 
     /*Hide away the search icon*/
-    .containerSearchHome{
+    .containerSearchHome {
         visibility: hidden;
     }
 
     /*=== Re-position the navBar buttons ===*/
-    .mainContainerForTopTitleHome{
+    .mainContainerForTopTitleHome {
         left: 13px;
         top: 13.5px;
     }
 
-    .containerLocationHome{
+    .containerLocationHome {
         left: auto;
         right: 140px;
         top: 24px;
 
     }
 
-    .containerBurgerAndMenuHome{
+    .containerBurgerAndMenuHome {
         left: auto;
         right: 20px;
         top: 22px;
     }
 
     /*Hide away the last name spans in titlecutter*/
-    .letterCInTopTitle, .letterIInTopTitle, .letterB2InTopTitle, .letterA2InTopTitle, .letterB1InTopTitle, .space{
-       visibility: hidden;
+    .letterCInTopTitle,
+    .letterIInTopTitle,
+    .letterB2InTopTitle,
+    .letterA2InTopTitle,
+    .letterB1InTopTitle,
+    .space {
+        visibility: hidden;
     }
 
-    .lettersInTopTitleHome{
+    .lettersInTopTitleHome {
         font-size: 6vw;
         letter-spacing: 1.25vw;
     }
@@ -328,7 +344,7 @@
 
 /*========== Slide down animation of the Burger and Menu =============*/
 
-.containerBurgerAndMenuHome{
+.containerBurgerAndMenuHome {
     animation: 1.5s linear 0.35s slideDownContainerBurgerAndMenuHome, 1.5s ease-in 0.5s fadeInBurgerAndMenuHome;
 }
 
@@ -336,6 +352,7 @@
     0% {
         transform: translateY(-400%);
     }
+
     100% {
         transform: translateY(0%);
     }
@@ -344,8 +361,9 @@
 @keyframes fadeInBurgerAndMenuHome {
 
     0% {
-       opacity: -1;
+        opacity: -1;
     }
+
     100% {
         opacity: 1;
     }
@@ -354,7 +372,7 @@
 /*========== Slide down animation of the Top Homepage Title =============*/
 
 
-.mainContainerForTopTitleHome{
+.mainContainerForTopTitleHome {
     animation: 1.5s linear 0.35s slideDownMainContainerForTopTitleHome;
 
 }
@@ -363,21 +381,23 @@
     0% {
         transform: translateY(-250%);
     }
+
     100% {
         transform: translateY(0%);
     }
 }
 
-.lettersInTopTitleHome{
+.lettersInTopTitleHome {
 
- animation: 1.0s ease-in 0.9s fadeInMainContainerForTopTitleHome;
+    animation: 1.0s ease-in 0.9s fadeInMainContainerForTopTitleHome;
 }
 
 @keyframes fadeInMainContainerForTopTitleHome {
 
     0% {
-       opacity: -1;
+        opacity: -1;
     }
+
     100% {
         opacity: 1;
     }
@@ -385,7 +405,7 @@
 
 /*========== Slide down (and fade-in) animation of the search icon =============*/
 
-.containerSearchHome{
+.containerSearchHome {
     animation: 1.5s linear 0.35s slideDownContainerSearchHome;
 }
 
@@ -393,21 +413,23 @@
     0% {
         transform: translateY(-250%);
     }
+
     100% {
         transform: translateY(0%);
     }
 }
 
 
-.search-icon-svg-home{
+.search-icon-svg-home {
     animation: 1.5s ease-in 0.5s fadeInContainerSearchHome;
 }
 
 @keyframes fadeInContainerSearchHome {
 
     0% {
-       opacity: -1;
+        opacity: -1;
     }
+
     100% {
         opacity: 1;
     }
@@ -415,7 +437,7 @@
 
 /*========== Slide down (and fade-in) animation of the location icon =============*/
 
-.containerLocationHome{
+.containerLocationHome {
     animation: 1.5s linear 0.35s slideDownContainerLocationHome;
 }
 
@@ -423,20 +445,22 @@
     0% {
         transform: translateY(-250%);
     }
+
     100% {
         transform: translateY(0%);
     }
 }
 
-.location-icon-svg-home{
+.location-icon-svg-home {
     animation: 1.5s ease-in 0.5s fadeInContainerLocationHome;
 }
 
 @keyframes fadeInContainerLocationHome {
 
     0% {
-       opacity: -1;
+        opacity: -1;
     }
+
     100% {
         opacity: 1;
     }
@@ -448,21 +472,21 @@
 
 /*============ Animate Burger on hover =============*/
 
-.rectB{
+.rectB {
     transition: transform 0.25s;
 }
 
-.containerBurgerAndMenuHome:hover .rectB{
+.containerBurgerAndMenuHome:hover .rectB {
     transform: translateX(0.8px);
 }
 
 /*============= Animate menue on hover ==============*/
 
-.menuTextHome{
+.menuTextHome {
     transition: transform 0.25s;
 }
 
-.containerBurgerAndMenuHome:hover .menuTextHome{
+.containerBurgerAndMenuHome:hover .menuTextHome {
     transform: translateX(2.5px);
 }
 
@@ -471,7 +495,7 @@
 /*============================================================================================*/
 
 
-.moveSmallContainerForTopTitleHomeRight{
+.moveSmallContainerForTopTitleHomeRight {
     background-color: transparent;
     font-size: 46px;
     font-weight: bold;
@@ -486,11 +510,11 @@
     transition: transform 0.5s;
 }
 
-.moveSmallContainerForTopTitleHomeRight{
+.moveSmallContainerForTopTitleHomeRight {
     transform: translateX(317px);
 }
 
-.moveSmallContainerForTopTitleHomeBackLeft{
+.moveSmallContainerForTopTitleHomeBackLeft {
     background-color: transparent;
     font-size: 46px;
     font-weight: bold;
@@ -505,11 +529,11 @@
     transition: transform 0.5s;
 }
 
-.moveSmallContainerForTopTitleHomeBackLeft{
+.moveSmallContainerForTopTitleHomeBackLeft {
     transform: translateX(0px);
 }
 
-.moveLargeContainerForTopTitleHomeLeft{
+.moveLargeContainerForTopTitleHomeLeft {
     background-color: transparent;
     position: absolute;
     height: 42px;
@@ -524,11 +548,11 @@
     transition: transform 0.5s;
 }
 
-.moveLargeContainerForTopTitleHomeLeft{
+.moveLargeContainerForTopTitleHomeLeft {
     transform: translateX(-159px);
 }
 
-.moveLargeContainerForTopTitleHomeBackRight{
+.moveLargeContainerForTopTitleHomeBackRight {
     background-color: transparent;
     position: absolute;
     height: 42px;
@@ -542,7 +566,7 @@
     transition: transform 0.5s;
 }
 
-.moveLargeContainerForTopTitleHomeBackRight{
+.moveLargeContainerForTopTitleHomeBackRight {
     transform: translateX(0px);
 }
 
@@ -556,20 +580,20 @@
 /*Responsivness when screen turns to ipad*/
 @media screen and (max-width:767px) {
 
-    .mainContainerForTopTitleHome{
+    .mainContainerForTopTitleHome {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         width: 21vw;
     }
 
-    .largeContainerForTopTitleHome{
+    .largeContainerForTopTitleHome {
         background-color: transparent;
         width: 100%;
         justify-content: flex-start;
     }
 
-    .smallContainerForTopTitleHome{
+    .smallContainerForTopTitleHome {
         background-color: transparent;
         text-align: left;
         justify-content: flex-start;
@@ -579,7 +603,7 @@
     }
 
     /*Move small container*/
-    .moveSmallContainerForTopTitleHomeRight{
+    .moveSmallContainerForTopTitleHomeRight {
         background-color: transparent;
         text-align: left;
         justify-content: flex-start;
@@ -591,11 +615,11 @@
     }
 
     /*Turn over movement of the small container*/
-    .moveSmallContainerForTopTitleHomeRight{
+    .moveSmallContainerForTopTitleHomeRight {
         transform: none;
     }
 
-    .moveSmallContainerForTopTitleHomeBackLeft{
+    .moveSmallContainerForTopTitleHomeBackLeft {
         background-color: transparent;
         text-align: left;
         justify-content: flex-start;
@@ -605,7 +629,7 @@
     }
 
     /*Move large container*/
-    .moveLargeContainerForTopTitleHomeLeft{
+    .moveLargeContainerForTopTitleHomeLeft {
         background-color: transparent;
         width: 100%;
         justify-content: flex-start;
@@ -613,18 +637,18 @@
         transition: width 0.5s;
     }
 
-    .moveLargeContainerForTopTitleHomeLeft{
+    .moveLargeContainerForTopTitleHomeLeft {
         width: 25%;
     }
 
-    .moveLargeContainerForTopTitleHomeBackRight{
+    .moveLargeContainerForTopTitleHomeBackRight {
         background-color: transparent;
         width: 100%;
         justify-content: flex-start;
         transition: width 0.5s;
     }
 
-    .moveLargeContainerForTopTitleHomeBackRight{
+    .moveLargeContainerForTopTitleHomeBackRight {
         width: 100%;
     }
 }
@@ -632,25 +656,25 @@
 /*Adding additional media query to ensure font size stays constant below 500px*/
 @media screen and (max-width:500px) {
 
-    .lettersInTopTitleHome{
+    .lettersInTopTitleHome {
         font-size: 30px;
         letter-spacing: 6px;
     }
 
     /*Adjusting additional markers to ensure titlecutting is works fine*/
-    .mainContainerForTopTitleHome{
+    .mainContainerForTopTitleHome {
         min-width: 105px;
     }
 
-    .moveLargeContainerForTopTitleHomeLeft{
+    .moveLargeContainerForTopTitleHomeLeft {
         width: 24.5%;
     }
 
-    .moveSmallContainerForTopTitleHomeBackLeft{
+    .moveSmallContainerForTopTitleHomeBackLeft {
         padding-left: 4px;
     }
 
-    .moveSmallContainerForTopTitleHomeRight{
+    .moveSmallContainerForTopTitleHomeRight {
         padding-left: 4px;
     }
 
@@ -662,19 +686,19 @@
 /*============================================================================================*/
 
 
-.containerSearchHome{
+.containerSearchHome {
     transition: transform 0.25s;
 }
 
-.containerSearchHome:hover{
+.containerSearchHome:hover {
     transform: scale(1.15);
 }
 
-.containerLocationHome{
+.containerLocationHome {
     transition: transform 0.25s;
 }
 
-.containerLocationHome:hover{
+.containerLocationHome:hover {
     transform: scale(1.15);
 }
 
@@ -686,14 +710,14 @@
 
 /*============== Navigation and Buttons in the Slider ===============*/
 
-.sliderButtons{
+.sliderButtons {
     background-color: transparent;
     position: absolute;
     top: 39%;
     left: 4.75%;
 }
 
-.btnPrev{
+.btnPrev {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -702,7 +726,7 @@
     z-index: 4;
 }
 
-.btnNext{
+.btnNext {
     background-color: transparent;
     transform: rotate(180deg);
     display: flex;
@@ -713,7 +737,7 @@
     z-index: 4;
 }
 
-.btnSlider01{
+.btnSlider01 {
     background-color: transparent;
     padding-right: 4px;
     padding-left: 4px;
@@ -724,7 +748,7 @@
     z-index: 4;
 }
 
-.btnSlider02{
+.btnSlider02 {
     background-color: transparent;
     padding-right: 4px;
     padding-left: 4px;
@@ -735,7 +759,7 @@
     z-index: 4;
 }
 
-.btnSlider03{
+.btnSlider03 {
     background-color: transparent;
     padding-right: 4px;
     padding-left: 4px;
@@ -749,30 +773,33 @@
 
 /*======= Carousel Slider =======*/
 
-.sliderHome{
+.sliderHome {
     background-color: pink;
-    width: 100%; /* Adjust width as needed */
-    height: 100vh; /* Adjust height as needed */
+    width: 100%;
+    /* Adjust width as needed */
+    height: 100vh;
+    /* Adjust height as needed */
     overflow: hidden;
     margin: 0 auto;
     padding: 0px;
     position: relative;
 }
 
-.slidesInSliderHome{
+.slidesInSliderHome {
     background-color: lightseagreen;
     display: flex;
     height: 100%;
-    flex-direction: column; /* Set vertical direction */
+    flex-direction: column;
+    /* Set vertical direction */
 }
 
-.slide{
+.slide {
     background-color: coral;
     min-height: 100%;
     position: relative;
 }
 
-.imagesInSliderHome{
+.imagesInSliderHome {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -792,12 +819,13 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);     /*This adjusts the Header and text inside of the slides in X and Y*/
+    transform: translate(-50%, -50%);
+    /*This adjusts the Header and text inside of the slides in X and Y*/
     text-align: center;
     font-size: 60px;
     color: white;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: transparent;
@@ -805,7 +833,8 @@
 
 /*======== General (slider-specific) header and paragrah styling ========*/
 .slide-content h1 {
-    margin-bottom: 20px; /* Adjust the margin as needed */
+    margin-bottom: 20px;
+    /* Adjust the margin as needed */
     font-size: 100px;
     text-align: center;
     margin-top: 0px;
@@ -813,30 +842,32 @@
     font-weight: normal;
     font-style: normal;
     letter-spacing: 10px;
-    padding-left: 10px; /*Added to compensate for the padding on the right, caused by letter spacing*/
+    padding-left: 10px;
+    /*Added to compensate for the padding on the right, caused by letter spacing*/
     line-height: 98px;
     padding-bottom: 6px;
     background-color: transparent;
     user-select: none;
 }
 
-.headerInThirdSlideOfSliderHome{
+.headerInThirdSlideOfSliderHome {
     color: black;
 }
 
-.containersForParagraphAndUnderlinesInSlider{
+.containersForParagraphAndUnderlinesInSlider {
     background-color: transparent;
     margin-top: 20px;
     height: fit-content;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     cursor: pointer;
 }
 
 .slide-content p {
-    font-size: 22px; /* Adjust the font size as needed */
+    font-size: 22px;
+    /* Adjust the font size as needed */
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;
@@ -844,15 +875,16 @@
     font-weight: normal;
     font-style: normal;
     letter-spacing: 2px;
-    padding-left: 1px;    /*To compensate the fact that letter-spacing causes a padding-right (of 2px)*/
+    padding-left: 1px;
+    /*To compensate the fact that letter-spacing causes a padding-right (of 2px)*/
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     line-height: 30px;
     background-color: transparent;
 }
 
-.containersHoldingDiscoverUnderlinesInSlider{
+.containersHoldingDiscoverUnderlinesInSlider {
     height: 2px;
     margin-top: 0px;
     display: flex;
@@ -863,29 +895,29 @@
 }
 
 /*Containers for discover underlines in the slider*/
-.containerFirstUnderlineSlider{
+.containerFirstUnderlineSlider {
     width: 118.8px;
 }
 
-.containerSecondUnderlineSlider{
+.containerSecondUnderlineSlider {
     width: 118.8px;
 
 }
 
-.containerThirdUnderlineSlider{
+.containerThirdUnderlineSlider {
     width: 118.8px;
 }
 
 /*====== Underlines inside of the first, second and third Slides ========*/
 
-.firstAnimatedUnderlineFirstSlide{
+.firstAnimatedUnderlineFirstSlide {
     width: 100%;
     height: 1px;
     position: absolute;
     background-color: black;
 }
 
-.secondAnimatedUnderlineFirstSlide{
+.secondAnimatedUnderlineFirstSlide {
     width: 100%;
     height: 1px;
     position: absolute;
@@ -893,14 +925,14 @@
     background-color: black;
 }
 
-.firstAnimatedUnderlineSecondSlide{
+.firstAnimatedUnderlineSecondSlide {
     width: 100%;
     height: 1px;
     position: absolute;
     background-color: white;
 }
 
-.secondAnimatedUnderlineSecondSlide{
+.secondAnimatedUnderlineSecondSlide {
     width: 100%;
     height: 1px;
     position: absolute;
@@ -908,14 +940,14 @@
     background-color: white;
 }
 
-.firstAnimatedUnderlineThirdSlide{
+.firstAnimatedUnderlineThirdSlide {
     width: 100%;
     height: 1px;
     position: absolute;
     background-color: black;
 }
 
-.secondAnimatedUnderlineThirdSlide{
+.secondAnimatedUnderlineThirdSlide {
     width: 100%;
     height: 1px;
     position: absolute;
@@ -924,16 +956,16 @@
 }
 
 /*======= Specific (for each slide) header and paragrah color styling ======*/
-.headerInFirstSlideOfSliderHome{
+.headerInFirstSlideOfSliderHome {
     color: black;
 
 }
 
-.paragraphInFirstSlideOfSliderHome{
+.paragraphInFirstSlideOfSliderHome {
     color: black;
 }
 
-.paragraphInThirdSlideOfSliderHome{
+.paragraphInThirdSlideOfSliderHome {
     color: black;
 }
 
@@ -946,75 +978,96 @@
 /*===== Animation of the two underline divs situated in the first slide of the Slider =====*/
 
 .containerForParagraphAndUnderlineInFirstSlide {
-    position: relative; /* Set the container as the reference position for the underline elements */
+    position: relative;
+    /* Set the container as the reference position for the underline elements */
 }
 
 .containerForParagraphAndUnderlineInFirstSlide:hover .firstAnimatedUnderlineFirstSlide {
-    transform: translateX(calc(200%)); /* Move the first underline to the right 2x its own length*/
-    transition: transform 0.75s ease; /* Apply a linear transition for smooth animation */
+    transform: translateX(calc(200%));
+    /* Move the first underline to the right 2x its own length*/
+    transition: transform 0.75s ease;
+    /* Apply a linear transition for smooth animation */
 }
 
 .containerForParagraphAndUnderlineInFirstSlide:hover .secondAnimatedUnderlineFirstSlide {
-    transform: translateX(calc(0%)); /* Move the second underline to the right 2x its own length (from -200 to 0%)*/
-    transition: transform 0.75s ease; /* Apply a linear transition for smooth animation */
+    transform: translateX(calc(0%));
+    /* Move the second underline to the right 2x its own length (from -200 to 0%)*/
+    transition: transform 0.75s ease;
+    /* Apply a linear transition for smooth animation */
 }
 
 .containerForParagraphAndUnderlineInFirstSlide .firstAnimatedUnderlineFirstSlide {
-    transition: transform 0.75s ease; /* Apply a linear transition to smoothly animate the first underline */
+    transition: transform 0.75s ease;
+    /* Apply a linear transition to smoothly animate the first underline */
 }
 
 .containerForParagraphAndUnderlineInFirstSlide .secondAnimatedUnderlineFirstSlide {
-    transition: transform 0.75s ease; /* Apply a linear transition to smoothly animate the second underline */
+    transition: transform 0.75s ease;
+    /* Apply a linear transition to smoothly animate the second underline */
 }
 
 
 /*===== Animation of the two underline divs situated in the second slide of Slider =====*/
 
 .containerForParagraphAndUnderlineInSecondSlide {
-    position: relative; /* Set the container as the reference position for the underline elements */
+    position: relative;
+    /* Set the container as the reference position for the underline elements */
 }
 
 .containerForParagraphAndUnderlineInSecondSlide:hover .firstAnimatedUnderlineSecondSlide {
-    transform: translateX(calc(200%)); /* Move the first underline to the right 2x its own length*/
-    transition: transform 0.75s ease; /* Apply a linear transition for smooth animation */
+    transform: translateX(calc(200%));
+    /* Move the first underline to the right 2x its own length*/
+    transition: transform 0.75s ease;
+    /* Apply a linear transition for smooth animation */
 }
 
 .containerForParagraphAndUnderlineInSecondSlide:hover .secondAnimatedUnderlineSecondSlide {
-    transform: translateX(calc(0%)); /* Move the second underline to the right 2x its own length (from -200 to 0%)*/
-    transition: transform 0.75s ease; /* Apply a linear transition for smooth animation */
+    transform: translateX(calc(0%));
+    /* Move the second underline to the right 2x its own length (from -200 to 0%)*/
+    transition: transform 0.75s ease;
+    /* Apply a linear transition for smooth animation */
 }
 
 .containerForParagraphAndUnderlineInSecondSlide .firstAnimatedUnderlineSecondSlide {
-    transition: transform 0.75s ease; /* Apply a linear transition to smoothly animate the first underline */
+    transition: transform 0.75s ease;
+    /* Apply a linear transition to smoothly animate the first underline */
 }
 
 .containerForParagraphAndUnderlineInSecondSlide .secondAnimatedUnderlineSecondSlide {
-    transition: transform 0.75s ease;/* Apply a linear transition to smoothly animate the second underline */
+    transition: transform 0.75s ease;
+    /* Apply a linear transition to smoothly animate the second underline */
 }
 
 
 /*===== Animation of the two underline divs situated in the third slide of Slider =====*/
 
 .containerForParagraphAndUnderlineInThirdSlide {
-    position: relative; /* Set the container as the reference position for the underline elements */
+    position: relative;
+    /* Set the container as the reference position for the underline elements */
 }
 
 .containerForParagraphAndUnderlineInThirdSlide:hover .firstAnimatedUnderlineThirdSlide {
-    transform: translateX(calc(200%)); /* Move the first underline to the right 2x its own length*/
-    transition: transform 0.75s ease; /* Apply a linear transition for smooth animation */
+    transform: translateX(calc(200%));
+    /* Move the first underline to the right 2x its own length*/
+    transition: transform 0.75s ease;
+    /* Apply a linear transition for smooth animation */
 }
 
 .containerForParagraphAndUnderlineInThirdSlide:hover .secondAnimatedUnderlineThirdSlide {
-    transform: translateX(calc(0%)); /* Move the second underline to the right 2x its own length (from -200 to 0%)*/
-    transition: transform 0.75s ease; /* Apply a linear transition for smooth animation */
+    transform: translateX(calc(0%));
+    /* Move the second underline to the right 2x its own length (from -200 to 0%)*/
+    transition: transform 0.75s ease;
+    /* Apply a linear transition for smooth animation */
 }
 
 .containerForParagraphAndUnderlineInThirdSlide .firstAnimatedUnderlineThirdSlide {
-    transition: transform 0.75s ease; /* Apply a linear transition to smoothly animate the first underline */
+    transition: transform 0.75s ease;
+    /* Apply a linear transition to smoothly animate the first underline */
 }
 
 .containerForParagraphAndUnderlineInThirdSlide .secondAnimatedUnderlineThirdSlide {
-    transition: transform 0.75s ease; /* Apply a linear transition to smoothly animate the second underline */
+    transition: transform 0.75s ease;
+    /* Apply a linear transition to smoothly animate the second underline */
 }
 
 
@@ -1022,7 +1075,7 @@
 /*======================== Styling of the Body and it´s compontents ==========================*/
 /*============================================================================================*/
 
-.twoHighlights{
+.twoHighlights {
     height: 100vh;
     background-color: rgb(8, 30, 108);
     position: relative;
@@ -1032,13 +1085,13 @@
     overflow: visible;
 }
 
-.areasOfInterestHome{
+.areasOfInterestHome {
     height: 200px;
     background-color: rgb(255, 255, 255);
     position: relative;
 }
 
-.shortAboutMe{
+.shortAboutMe {
     height: 100vh;
     background-color: white;
     position: relative;
@@ -1049,7 +1102,7 @@
 }
 
 
-.contactMeHome{
+.contactMeHome {
     height: 100vh;
     background-color: rgb(8, 30, 108);
 }
@@ -1169,7 +1222,7 @@
     object-fit: cover;
 }
 
-.pageSketch2{
+.pageSketch2 {
     width: 45%;
     height: 45%;
     object-fit: cover;
@@ -1182,21 +1235,21 @@
 /*============================================================================================*/
 
 
-.firstAnimatedUnderlineHighlight{
+.firstAnimatedUnderlineHighlight {
     transition: transform 0.75s 0s;
 }
 
-.containerDiscoverAndUnderline:hover .firstAnimatedUnderlineHighlight{
+.containerDiscoverAndUnderline:hover .firstAnimatedUnderlineHighlight {
     transform: translateX(250px);
 }
 
 
 
-.secondAnimatedUnderlineHighlight{
+.secondAnimatedUnderlineHighlight {
     transition: transform 0.75s 0s;
 }
 
-.containerDiscoverAndUnderline:hover .secondAnimatedUnderlineHighlight{
+.containerDiscoverAndUnderline:hover .secondAnimatedUnderlineHighlight {
     transform: translateX(62.5px);
 }
 
@@ -1205,9 +1258,9 @@
 /*========= Adding responsivness to Highlights =========*/
 /*======================================================*/
 
-@media screen and (max-width:767px){
+@media screen and (max-width:767px) {
 
-    .rightHighlight{
+    .rightHighlight {
         display: none;
     }
 
@@ -1223,7 +1276,7 @@
 /*==================== General Styling of the div called Areas of Interest ===================*/
 /*============================================================================================*/
 
-.areasOfInterestHome{
+.areasOfInterestHome {
     background-color: white;
     height: 1520px;
     width: 100%;
@@ -1235,7 +1288,7 @@
 
 }
 
-.firstColumnsOfInterestFromLeft{
+.firstColumnsOfInterestFromLeft {
     background-color: yellow;
     width: 23.5%;
     margin-left: 12%;
@@ -1246,7 +1299,7 @@
 
 }
 
-.secondColumnsOfInterestFromLeft{
+.secondColumnsOfInterestFromLeft {
     background-color: yellow;
     width: 23.5%;
     margin-right: 12%;
@@ -1257,29 +1310,31 @@
 
 }
 
-.stickyContainer{
+.stickyContainer {
     background-color: blueviolet;
-    height: 60vh;   /*Adjusts the static position of the stickyContainer horizontally*/
+    height: 60vh;
+    /*Adjusts the static position of the stickyContainer horizontally*/
     position: sticky;
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
-    top: 150px;     /*Adjusts the distance from navbar to stickyContainer, telling when it should become sticky.*/
+    top: 150px;
+    /*Adjusts the distance from navbar to stickyContainer, telling when it should become sticky.*/
     bottom: 0;
     z-index: 1;
     pointer-events: none;
 }
 
 
-.middleStickyTitleInAreasOfInterest{
+.middleStickyTitleInAreasOfInterest {
     background-color: orange;
     position: absolute;
     text-align: center;
     font-family: Austin;
     font-size: 100px;
     font-style: normal;
-    font-weight:normal;
+    font-weight: normal;
     line-height: 88px;
     user-select: none;
 
@@ -1289,24 +1344,24 @@
 /*======================== General Styling of each area of interest ==========================*/
 /*============================================================================================*/
 
-.topContainerFirstColumnOfInterestFromLeft{
+.topContainerFirstColumnOfInterestFromLeft {
     background-color: lightcoral;
     height: 456px;
 }
 
-.bottomContainerFirstColumnOfInterestFromLeft{
+.bottomContainerFirstColumnOfInterestFromLeft {
     background-color: lightcoral;
     height: 456px;
     margin-bottom: 360px;
 }
 
-.topContainerSecondColumnOfInterestFromLeft{
+.topContainerSecondColumnOfInterestFromLeft {
     background-color: lightcoral;
     height: 456px;
     margin-top: 350px;
 }
 
-.bottomContainerSecondColumnOfInterestFromLeft{
+.bottomContainerSecondColumnOfInterestFromLeft {
     background-color: lightcoral;
     height: 456px;
 }
@@ -1339,50 +1394,50 @@
 
 /*Adding hover zoom on pictures aboutMe-Gaming*/
 
-.imgAboutMe{
+.imgAboutMe {
     transition: transform 0.5s;
     /*Change cursor to hand, when hovering*/
     cursor: pointer;
 }
 
-.imgAboutMe:hover{
+.imgAboutMe:hover {
     transform: scale(1.15);
 }
 
 
-.imgAppDev{
+.imgAppDev {
     transition: transform 0.5s;
     /*Change cursor to hand, when hovering*/
     cursor: pointer;
 }
 
-.imgAppDev:hover{
-    transform: scale(1.15);
-    /*Change cursor to hand, when hovering*/
-    cursor: pointer;
-}
-
-
-.imgWebDev{
-    transition: transform 0.5s;
-    /*Change cursor to hand, when hovering*/
-    cursor: pointer;
-}
-
-.imgWebDev:hover{
+.imgAppDev:hover {
     transform: scale(1.15);
     /*Change cursor to hand, when hovering*/
     cursor: pointer;
 }
 
 
-.imgGameDev{
+.imgWebDev {
     transition: transform 0.5s;
     /*Change cursor to hand, when hovering*/
     cursor: pointer;
 }
 
-.imgGameDev:hover{
+.imgWebDev:hover {
+    transform: scale(1.15);
+    /*Change cursor to hand, when hovering*/
+    cursor: pointer;
+}
+
+
+.imgGameDev {
+    transition: transform 0.5s;
+    /*Change cursor to hand, when hovering*/
+    cursor: pointer;
+}
+
+.imgGameDev:hover {
     transform: scale(1.15);
 }
 
@@ -1392,7 +1447,7 @@
 /*============================== Styling of the Contact me Div ===============================*/
 /*============================================================================================*/
 
-.contactMeHome{
+.contactMeHome {
     background-color: white;
     height: fit-content;
     display: flex;
@@ -1404,7 +1459,7 @@
 
 }
 
-.containerContactMeTitle{
+.containerContactMeTitle {
     background-color: transparent;
     padding: 5px;
     width: fit-content;
@@ -1413,20 +1468,20 @@
 
 }
 
-.containerContactMeTitle h1{
+.containerContactMeTitle h1 {
     margin: 0;
     font-family: Austin;
     color: white;
     font-size: 100px;
     font-style: normal;
-    font-weight:normal;
+    font-weight: normal;
     line-height: 88px;
     user-select: none;
     width: fit-content;
 
 }
 
-.containerContactMe{
+.containerContactMe {
     background-color: rgb(8, 30, 108);
     margin-top: 60px;
     height: 78vh;
@@ -1436,7 +1491,7 @@
     padding-bottom: 40px;
 }
 
-.leftContactHome{
+.leftContactHome {
     width: 50%;
     background-color: rgb(8, 30, 108);
     display: flex;
@@ -1445,7 +1500,7 @@
 
 }
 
-.rightContactHome{
+.rightContactHome {
     width: 50%;
     background-color: rgb(8, 30, 108);
     display: flex;
@@ -1453,7 +1508,7 @@
     align-items: center;
 }
 
-.containerContactMeHome{
+.containerContactMeHome {
     background-color: rgb(8, 30, 108);
     color: white;
     width: 60%;
@@ -1461,24 +1516,29 @@
     margin-top: 0;
 }
 
-.containerContactMeHome h1{
+.containerContactMeHome h1 {
     margin-top: 0;
     font-family: Austin;
 }
 
 
-.leftImgContainer{
+.leftImgContainer {
     width: 70%;
     height: 70%;
 }
 
-.leftImgContainer img{
+.leftImgContainer img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 
 }
 
+/*Creates line-break after element*/
+.contactLabel::after {
+    content: "\a";
+    white-space: pre;
+}
 
 
 
@@ -1487,7 +1547,7 @@
 /*============================ General Styling of Short About Me =============================*/
 /*============================================================================================*/
 
-.shortAboutMe{
+.shortAboutMe {
     background-color: green;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1498,7 +1558,7 @@
     margin-top: 50px;
 }
 
-.topShortAboutMe{
+.topShortAboutMe {
     grid-column: 1/3;
     grid-row: 1/2;
     width: 100%;
@@ -1512,7 +1572,7 @@
     align-items: center;
 }
 
-.bottomShortAboutMe{
+.bottomShortAboutMe {
     grid-column: 1/3;
     grid-row: 2/3;
     width: 100%;
@@ -1523,7 +1583,7 @@
     align-items: center;
 }
 
-.bottomShortAboutMe p{
+.bottomShortAboutMe p {
     width: 40%;
     text-align: center;
     margin-top: 80px;
@@ -1534,7 +1594,7 @@
 /*============================================================================================*/
 
 /*==== Detailed Styling of stopShortAboutMe ====*/
-.leftTopShortAboutMe{
+.leftTopShortAboutMe {
     width: 50%;
     height: 100%;
     position: absolute;
@@ -1544,7 +1604,7 @@
     overflow: hidden;
 }
 
-.rightTopShortAboutMe{
+.rightTopShortAboutMe {
     width: 50%;
     height: 100%;
     position: absolute;
@@ -1556,7 +1616,7 @@
     align-items: center;
 }
 
-.middleTopShortAboutMe{
+.middleTopShortAboutMe {
     width: fit-content;
     height: fit-content;
     position: absolute;
@@ -1565,13 +1625,13 @@
     text-align: center;
 }
 
-.containerImgRightTopShortAboutMe{
+.containerImgRightTopShortAboutMe {
     width: 45%;
     height: 55%;
     background-color: lightyellow;
 }
 
-.topTitleShortAboutMe{
+.topTitleShortAboutMe {
     width: fit-content;
     height: fit-content;
     position: absolute;
@@ -1581,7 +1641,7 @@
 
 /*==== Detailed Styling of middleTopShortAboutMe  ====*/
 
-.middleTopShortAboutMe h1{
+.middleTopShortAboutMe h1 {
     font-family: Austin;
     font-style: normal;
     font-weight: normal;
@@ -1595,9 +1655,10 @@
     font-family: Sofia-Pro;
 }
 
-.topTitleShortAboutMe h1{
+.topTitleShortAboutMe h1 {
     background-color: transparent;
-    color:  rgb(247, 225, 147); /*Inverted color of rgb(8, 30, 108)*/
+    color: rgb(247, 225, 147);
+    /*Inverted color of rgb(8, 30, 108)*/
     font-family: Sofia-Pro;
     /*Font added */
     font-family: "Sofia-Pro";
@@ -1616,14 +1677,14 @@
 /*THESE PICTURES MUST BE RE-DIMENSIONED AND TINTED OF COURSE*/
 /*YELLOW TINT SHOULD BE the yellwo from inverted color, and blue from rgb (8, 30, 108)*/
 
-.leftTopShortAboutMe img{
+.leftTopShortAboutMe img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     margin-left: 50px;
 }
 
-.containerImgRightTopShortAboutMe img{
+.containerImgRightTopShortAboutMe img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1634,9 +1695,9 @@
 /*=====================================================================*/
 
 
-@media screen and (max-width:767px){
+@media screen and (max-width:767px) {
 
-    .rightTopShortAboutMe{
+    .rightTopShortAboutMe {
         display: none;
     }
 
@@ -1650,7 +1711,7 @@
 /*================================== Styling of the Footer ===================================*/
 /*============================================================================================*/
 
-.footerHome{
+.footerHome {
     display: flex;
     background-color: rgb(8, 30, 108);
     height: 330px;
