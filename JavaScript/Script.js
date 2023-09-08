@@ -14,7 +14,7 @@ setInterval(constantRotationOfLogo, 10);
 //Declare a variable that will decide the amount of degress the Logo should rotate
 let degrees = 0;
 //Function that is called by the setInterval
-function constantRotationOfLogo(){
+function constantRotationOfLogo() {
   //Add -0.25 degrees to variable degree for every time this function is called
   degrees -= 0.30;
   //Rotate the CurcularLogoDiv anti clockwise an additional -0.25 degres every time function is called
@@ -26,10 +26,10 @@ function constantRotationOfLogo(){
 
 let lastScrollTop = 0;
 
-window.addEventListener("scroll", function(){
-let st = document.documentElement.scrollTop;
+window.addEventListener("scroll", function () {
+  let st = document.documentElement.scrollTop;
 
-  if (st > lastScrollTop){
+  if (st > lastScrollTop) {
     //When Scrolling down: rotate logo anti-clockwise
     degrees -= 2.5;
     CircularLogoDiv.style.rotate = degrees + "deg";
@@ -57,16 +57,16 @@ let st = document.documentElement.scrollTop;
 
 // Function to update the position of the rotatingLogo
 function updatePosition() {
-    // Getting height of rotating logo
-    var heightOfRotatingLogo = rotatingLogo.offsetHeight;
+  // Getting height of rotating logo
+  var heightOfRotatingLogo = rotatingLogo.offsetHeight;
 
-    // Getting vertical center of the rotatingLogo
-    var centerOfDiv = heightOfRotatingLogo / 2;
+  // Getting vertical center of the rotatingLogo
+  var centerOfDiv = heightOfRotatingLogo / 2;
 
-    var verticalCenterOfWindow = window.innerHeight / 2;
+  var verticalCenterOfWindow = window.innerHeight / 2;
 
-    // Setting top (vertical position) for the rotatingLogo div
-    rotatingLogo.style.top = verticalCenterOfWindow - centerOfDiv + "px";
+  // Setting top (vertical position) for the rotatingLogo div
+  rotatingLogo.style.top = verticalCenterOfWindow - centerOfDiv + "px";
 }
 
 // Attach the updatePosition function to the resize event
@@ -102,7 +102,7 @@ window.addEventListener('load', resizeLogo);
 
 /*========================= Toggle logo visibility for small screens ============================*/
 
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
   const windowWidth = window.innerWidth;
 
   if (windowWidth <= 767) {
@@ -140,7 +140,7 @@ const slidingDiv = document.getElementById("slidingDiv");
 
 window.setTimeout(hideSlidingDiv, 1380);
 
-function hideSlidingDiv(){
+function hideSlidingDiv() {
 
   slidingDiv.style.display = "none";
 };
@@ -155,7 +155,7 @@ const smallContainerForTopTitleHome = document.getElementById("smallContainerFor
 const largeContainerForTopTitleHome = document.getElementById("largeContainerForTopTitleHome");
 const mainContainerForTopTitleHome = document.getElementById("mainContainerForTopTitleHome");
 
-window.onscroll = function() {
+window.onscroll = function () {
   let scrollLimit = 50;
   if (window.scrollY > scrollLimit) {
     //Moving small container right
@@ -168,7 +168,7 @@ window.onscroll = function() {
     largeContainerForTopTitleHome.classList.remove("moveLargeContainerForTopTitleHomeBackRight");
     largeContainerForTopTitleHome.classList.add("moveLargeContainerForTopTitleHomeLeft");
   }
-  else if(window.scrollY < scrollLimit) {
+  else if (window.scrollY < scrollLimit) {
     //Moving small container back left
     smallContainerForTopTitleHome.classList.remove("moveSmallContainerForTopTitleHomeRight");
     smallContainerForTopTitleHome.classList.add("moveSmallContainerForTopTitleHomeBackLeft");
@@ -329,7 +329,7 @@ window.addEventListener('resize', () => {
 /*============================= LOAD SLIDER VIDEO TO SLIDER ==================================*/
 /*============================================================================================*/
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   let videoDiv = document.getElementById("videoSlide");
 
   // Create a video element
@@ -389,6 +389,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /*=== Placing topTItleShortAboutMe on the bottom border of topShortAboutMe ===*/
 
+/*
 const topTitleShortAboutMe = document.getElementById("topTitleShortAboutMe");
 
 let heightOfTopTitleShortAboutMe = topTitleShortAboutMe.offsetHeight;
@@ -396,3 +397,4 @@ let heightOfTopTitleShortAboutMe = topTitleShortAboutMe.offsetHeight;
 let newHeight = heightOfTopTitleShortAboutMe / 2;
 
 topTitleShortAboutMe.style.bottom = "-" + newHeight + "px";
+*/
