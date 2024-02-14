@@ -1,2 +1,2 @@
 # atkobabic.com
- This is my homepage
+ My first (and only) digital (HTML, CSS & JS) playground, used for learning.
